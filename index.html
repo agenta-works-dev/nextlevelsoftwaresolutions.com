@@ -1,369 +1,633 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Epicor ERP &amp; .NET Integration Consulting | Next Level Software Solutions LLC</title>
-  <meta name="description" content="Epicor ERP, SQL Server, and .NET integration consulting. Hands-on engineering for dashboards, automation, reliable APIs, performance fixes, and clean handoff." />
-
-  <link rel="canonical" href="https://www.nextlevelsoftwaresolutions.com/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Epicor ERP &amp; .NET Integration Consulting | Next Level Software Solutions LLC" />
-  <meta property="og:description" content="Hands-on engineering for Epicor ERP, SQL Server, and .NET integrations — reliability-first with clean documentation and practical handoff." />
-  <meta property="og:url" content="https://www.nextlevelsoftwaresolutions.com/" />
-  <meta property="og:site_name" content="Next Level Software Solutions LLC" />
-  <!-- If you have a share image, set it here -->
-  <!-- <meta property="og:image" content="https://www.nextlevelsoftwaresolutions.com/assets/og-image.png" /> -->
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Epicor ERP &amp; .NET Integration Consulting | Next Level Software Solutions LLC" />
-  <meta name="twitter:description" content="Epicor ERP, SQL Server, and .NET integration consulting — automation, reporting, performance, and reliability fixes." />
-  <!-- <meta name="twitter:image" content="https://www.nextlevelsoftwaresolutions.com/assets/og-image.png" /> -->
-
-  <link rel="icon" href="assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Next Level Software Solutions LLC",
-    "url": "https://www.nextlevelsoftwaresolutions.com/",
-    "email": "michael@nextlevelsoftwaresolutions.com",
-    "telephone": "+16617556602",
-    "areaServed": "US",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santa Clarita",
-      "addressRegion": "CA",
-      "addressCountry": "US"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Michael Jackson"
-    },
-    "description": "Epicor ERP, SQL Server, and .NET integration consulting. Hands-on engineering for dashboards, automation, performance, reliability, and maintainable handoff."
-  }
-  </script>
-</head>
-
-<body>
-  <header class="hero" id="top">
-    <div class="hero__bg" aria-hidden="true"></div>
-
-    <div class="container hero__content">
-      <a class="brand" href="#top" aria-label="Next Level Software Solutions LLC">
-        <div class="brand__mark" aria-hidden="true">
-          <img src="assets/logo-mark.png" alt="" />
-        </div>
-        <div class="brand__text">
-          <div class="brand__name">Next Level</div>
-          <div class="brand__sub">Software Solutions LLC</div>
-        </div>
-      </a>
-
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <h1>Epicor ERP + .NET Integration Consulting</h1>
-          <p class="lead">
-            Hands-on engineering for dashboards, automation, reliable APIs, and SQL performance — built for security, maintainability, and clean handoff.
-          </p>
-
-          <div class="chips" aria-label="Specialties">
-            <span class="chip">Epicor ERP</span>
-            <span class="chip">SQL Server</span>
-            <span class="chip">C# / .NET</span>
-            <span class="chip">APIs &amp; Integrations</span>
-            <span class="chip">Automation</span>
-            <span class="chip">Reporting</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f6f2" />
+    <title>
+      Custom Software, Connected Systems &amp; Practical AI | Next Level
+      Software Solutions
+    </title>
+    <meta
+      name="description"
+      content="Custom software, systems integration, reporting, and practical AI. Work directly with Next Level Software Solutions to build around how your business operates."
+    />
+    <link rel="canonical" href="https://nextlevelsoftwaresolutions.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Better software. Connected systems. More capable businesses."
+    />
+    <meta
+      property="og:description"
+      content="Custom software, systems integration, and practical AI. Explore our work and find your first useful automation with a free workflow checkup."
+    />
+    <meta property="og:url" content="https://nextlevelsoftwaresolutions.com/" />
+    <meta property="og:site_name" content="Next Level Software Solutions" />
+    <meta
+      property="og:image"
+      content="https://nextlevelsoftwaresolutions.com/assets/social-preview.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Next Level Software Solutions — Software, systems, and practical AI"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Better software. Connected systems. More capable businesses."
+    />
+    <meta
+      name="twitter:description"
+      content="Custom software, systems integration, and practical AI. Find your first useful automation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nextlevelsoftwaresolutions.com/assets/social-preview.png"
+    />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="scripts/site.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Next Level Software Solutions LLC",
+        "url": "https://nextlevelsoftwaresolutions.com/",
+        "email": "michael@nextlevelsoftwaresolutions.com",
+        "telephone": "+16617556602",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Clarita",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "founder": { "@type": "Person", "name": "Michael Jackson" },
+        "description": "Custom software development, systems integration, reporting, automation, and practical AI."
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="#top"
+          aria-label="Next Level Software Solutions home"
+          ><img src="assets/logo-mark.png" width="48" height="48" alt="" /><span
+            >Next Level<small>Software Solutions LLC</small></span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-menu-toggle
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav
+          class="site-nav"
+          id="navigation"
+          aria-label="Main navigation"
+          data-menu
+        >
+          <a href="#services">What we do</a><a href="#approach">Our approach</a
+          ><a href="#andonity">Andonity</a
+          ><a href="automation-checkup.html">Free checkup</a
+          ><a class="nav-contact" href="#contact"
+            >Let’s talk <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero section" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="tiny-square" aria-hidden="true"></span> Software.
+              Systems. Practical AI.
+            </p>
+            <h1>
+              Better software.<br />Connected systems.<br /><span
+                >More capable<br />businesses.</span
+              >
+            </h1>
+            <p class="hero-lead">
+              Turn operational challenges into practical software—connecting
+              systems, improving workflows, and putting AI to work where it
+              makes a difference.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="#contact"
+                >Discuss your project <span aria-hidden="true">↗</span></a
+              ><a class="text-link" href="#services"
+                >See what we can build <span aria-hidden="true">↓</span></a
+              >
+            </div>
+            <p class="hero-footnote">
+              Built around how your business actually operates.
+            </p>
           </div>
-
-          <div class="cta">
-            <a class="btn btn--primary"
-               href="mailto:michael@nextlevelsoftwaresolutions.com?subject=Intro%20Call%20Request&amp;body=Hi%20Michael%2C%0A%0AI%E2%80%99d%20like%20to%20book%20a%2020-minute%20intro%20call.%0A%0APreferred%20times%3A%0A-%20%0A-%20%0A-%20%0A%0AQuick%20context%20on%20what%20I%E2%80%99m%20trying%20to%20solve%3A%0A%0AThanks%2C">
-              Book a 20-minute call
-            </a>
-            <a class="btn btn--ghost" href="#skills">See outcomes &amp; skills</a>
-          </div>
-
-          <div class="meta-lines">
-            <div class="meta-line"><span class="meta-k">Location</span><span class="meta-v">Santa Clarita, CA</span></div>
-            <div class="meta-line"><span class="meta-k">Email</span><span class="meta-v"><a href="mailto:michael@nextlevelsoftwaresolutions.com">michael@nextlevelsoftwaresolutions.com</a></span></div>
-            <div class="meta-line"><span class="meta-k">Phone</span><span class="meta-v"><a href="tel:+16617556602">(661) 755-6602</a></span></div>
-          </div>
-        </div>
-
-        <div class="hero__card" role="presentation">
-          <div class="card">
-            <div class="card__title">Michael Jackson</div>
-            <div class="card__role">Software Solutions Architect</div>
-
-            <div class="card__lines">
-              <a class="card__line" href="tel:+16617556602">
-                <span class="icon" aria-hidden="true">☎</span>
-                <span>(661) 755-6602</span>
-              </a>
-              <a class="card__line" href="mailto:michael@nextlevelsoftwaresolutions.com">
-                <span class="icon" aria-hidden="true">✉</span>
-                <span>michael@nextlevelsoftwaresolutions.com</span>
-              </a>
-              <div class="card__line">
-                <span class="icon" aria-hidden="true">⌂</span>
-                <span>Santa Clarita, CA</span>
+          <div
+            class="work-map"
+            role="img"
+            aria-label="ERP and data, documents and email, and people and decisions connect through Next Level to produce clearer information, useful automation, and visible next steps."
+          >
+            <div class="map-top">
+              <span class="eyebrow">A clearer way through</span
+              ><span class="map-index">01 / CONNECT</span>
+            </div>
+            <div class="map-sources">
+              <div>
+                <span class="map-icon" aria-hidden="true">▤</span>ERP &amp; data
               </div>
-              <a class="card__line" href="https://www.nextlevelsoftwaresolutions.com" target="_blank" rel="noreferrer">
-                <span class="icon" aria-hidden="true">🌐</span>
-                <span>nextlevelsoftwaresolutions.com</span>
-              </a>
+              <div>
+                <span class="map-icon" aria-hidden="true">▱</span>Documents
+                &amp; email
+              </div>
+              <div>
+                <span class="map-icon" aria-hidden="true">◎</span>People &amp;
+                decisions
+              </div>
             </div>
-
-            <div class="card__hint">
-              Direct engagement • Clear scope • Security- and reliability-first
+            <svg
+              class="map-lines"
+              viewBox="0 0 420 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M70 0V26Q70 42 86 42H194Q210 42 210 58V100M210 0V100M350 0V26Q350 42 334 42H226Q210 42 210 58"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.3"
+              />
+              <circle cx="210" cy="73" r="4" fill="currentColor" />
+            </svg>
+            <div class="map-center">
+              <span class="map-center-symbol" aria-hidden="true">↗</span>
+              <div>Designed to work.<small>Built to work together.</small></div>
+            </div>
+            <div class="map-connector" aria-hidden="true"></div>
+            <div class="map-outcomes">
+              <span>Clearer information <b aria-hidden="true">↗</b></span
+              ><span>Useful automation <b aria-hidden="true">↗</b></span
+              ><span>Visible next steps <b aria-hidden="true">↗</b></span>
+            </div>
+            <p class="map-caption">
+              From scattered inputs<br />to a dependable way forward.
+            </p>
+            <span class="map-decoration" aria-hidden="true">+</span>
+          </div>
+        </div>
+      </section>
+      <div class="principle-strip">
+        <div class="container">
+          <span><i aria-hidden="true">↗</i> Direct access to the builder</span
+          ><span><i aria-hidden="true">↗</i> A practical first step</span
+          ><span><i aria-hidden="true">↗</i> Built for the long term</span>
+        </div>
+      </div>
+      <section class="section services-section" id="services">
+        <div class="container split-layout">
+          <div class="section-intro">
+            <p class="eyebrow">01 / What we do</p>
+            <h2>What could work<br />better in your<br />business?</h2>
+            <p>
+              Repeated data entry. Reports assembled by hand. Software that no
+              longer fits. An idea that needs a working application.
+            </p>
+            <p>
+              We help define the problem, choose a sensible approach, and build
+              something your team can use and maintain.
+            </p>
+            <a class="text-link" href="#in-practice"
+              >See a practical example <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="service-list">
+            <article class="service-row">
+              <span class="service-number">01</span>
+              <div>
+                <h3>Custom software &amp; applications</h3>
+                <p>
+                  Business applications, internal tools, customer portals, and
+                  web platforms designed around the people and processes they
+                  serve.
+                </p>
+                <span class="service-tags"
+                  >Web applications · Internal tools · Native applications</span
+                >
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-row">
+              <span class="service-number">02</span>
+              <div>
+                <h3>Connected systems &amp; modernization</h3>
+                <p>
+                  Connect ERP systems, databases, APIs, and existing
+                  applications. Improve what works and replace the pieces that
+                  hold the business back.
+                </p>
+                <span class="service-tags">ERP · APIs · Data integration</span>
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-row">
+              <span class="service-number">03</span>
+              <div>
+                <h3>AI &amp; workflow automation</h3>
+                <p>
+                  Put AI and automation to practical use with documents,
+                  business knowledge, and repeatable tasks—with clear
+                  permissions, review points, and records of what happened.
+                </p>
+                <span class="service-tags"
+                  >Document workflows · AI assistants · Task coordination</span
+                >
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-row">
+              <span class="service-number">04</span>
+              <div>
+                <h3>Reporting &amp; operational visibility</h3>
+                <p>
+                  Turn scattered information into useful reports and dashboards,
+                  with agreed definitions and a clear connection to the
+                  underlying data.
+                </p>
+                <span class="service-tags"
+                  >Reports · Dashboards · Data quality</span
+                >
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-row">
+              <span class="service-number">05</span>
+              <div>
+                <h3>Architecture &amp; technical guidance</h3>
+                <p>
+                  Turn an idea or difficult technical decision into a workable
+                  plan. Review existing systems, resolve reliability problems,
+                  and establish a foundation that can grow.
+                </p>
+                <span class="service-tags"
+                  >Technical strategy · Design reviews · Reliability</span
+                >
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section freebie-section" id="free-checkup">
+        <div class="container">
+          <div class="freebie-panel">
+            <div>
+              <p class="eyebrow">
+                <span class="status-dot" aria-hidden="true"></span> A free tool
+                for your next step
+              </p>
+              <h2>Find your first<br /><em>useful</em> automation.</h2>
+              <p>
+                Tell us about a task your team repeats. Get a practical starting
+                point for improving it—with the systems involved, where AI might
+                help, and the decisions that should stay with your people.
+              </p>
+              <a class="button button-mint" href="automation-checkup.html"
+                >Find my first automation <span aria-hidden="true">↗</span></a
+              ><span class="freebie-note"
+                >Open to everyone. No account or email required.</span
+              >
+            </div>
+            <div
+              class="brief-preview"
+              aria-label="What your free opportunity brief includes"
+            >
+              <div class="preview-header">
+                <span>YOUR OPPORTUNITY BRIEF</span
+                ><span aria-hidden="true">↗</span>
+              </div>
+              <div class="preview-title">A clearer starting point.</div>
+              <div class="preview-line">
+                <span>01</span>
+                <div>
+                  A sensible first project<small
+                    >A bounded, useful piece of work.</small
+                  >
+                </div>
+                <b aria-hidden="true">✓</b>
+              </div>
+              <div class="preview-line">
+                <span>02</span>
+                <div>
+                  The connections it needs<small
+                    >Your information, systems, and people.</small
+                  >
+                </div>
+                <b aria-hidden="true">✓</b>
+              </div>
+              <div class="preview-line">
+                <span>03</span>
+                <div>
+                  Review points &amp; boundaries<small
+                    >Clear decisions about who does what.</small
+                  >
+                </div>
+                <b aria-hidden="true">✓</b>
+              </div>
+              <div class="preview-bottom">
+                <span>Save it. Share it. Build on it.</span
+                ><span aria-hidden="true">↓</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="scroll-hint">
-        <a href="#skills" aria-label="Scroll to content">↓</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="skills" class="section section--alt">
-      <div class="container">
-        <h2>Outcomes + Key Skills</h2>
-        <p class="body">
-          Practical engineering across ERP, integration, and full-stack delivery — focused on reliability, performance, and a clean handoff your team can maintain.
-        </p>
-
-        <div class="grid">
-          <div class="panel">
-            <h3>Typical Wins</h3>
-            <ul>
-              <li>Replace manual steps (Excel/Access/email chains) with reliable automations and audit trails</li>
-              <li>Dashboards and reporting that match how the business actually runs</li>
-              <li>Stabilize integrations with idempotency, logging, retry rules, and clear error handling</li>
-              <li>Speed up slow SQL and remove recurring “mystery failures”</li>
-            </ul>
+      </section>
+      <section class="section example-section" id="in-practice">
+        <div class="container example-grid">
+          <div class="section-intro">
+            <p class="eyebrow">02 / See the work, not just the words</p>
+            <h2>One document. <br />A few important <br />differences.</h2>
+            <p>
+              A supplier acknowledgement arrives. Someone needs to check it
+              against the purchase order. A useful tool can surface the
+              differences and leave the decision with the right person.
+            </p>
+            <p class="example-disclosure">
+              Try this illustrative comparison. It uses sample data and explicit
+              rules; it does not connect to an ERP or change any records.
+            </p>
+            <a
+              class="text-link"
+              href="automation-checkup.html?example=order-acknowledgement"
+              >Explore this example’s opportunity brief
+              <span aria-hidden="true">↗</span></a
+            >
           </div>
-
-          <div class="panel">
-            <h3>Key Skills</h3>
-            <div class="chips" aria-label="Key skills list">
-              <span class="chip">Epicor ERP</span>
-              <span class="chip">BAQs &amp; Dashboards</span>
-              <span class="chip">SQL Server</span>
-              <span class="chip">C# / .NET</span>
-              <span class="chip">APIs &amp; Integrations</span>
-              <span class="chip">Automation</span>
-              <span class="chip">Reporting</span>
-              <span class="chip">Security-minded design</span>
+          <div class="order-example" data-order-example>
+            <div class="example-toolbar">
+              <span class="eyebrow">Sample / PO 8842</span
+              ><span class="sample-label">Illustrative data</span>
             </div>
+            <h3>Supplier acknowledgement check</h3>
+            <p class="example-item">Aluminum housing · Line 01</p>
+            <div
+              class="scenario-controls"
+              role="group"
+              aria-label="Choose a sample acknowledgement"
+            >
+              <button
+                type="button"
+                data-scenario="differences"
+                aria-pressed="true"
+              >
+                With differences</button
+              ><button
+                type="button"
+                data-scenario="matching"
+                aria-pressed="false"
+              >
+                Matching fields
+              </button>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <caption class="sr-only">
+                  Compare purchase order and supplier acknowledgement fields
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Field</th>
+                    <th scope="col">Purchase order</th>
+                    <th scope="col">Acknowledged</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Quantity</th>
+                    <td>120</td>
+                    <td data-ack-field="quantity">100</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Unit price</th>
+                    <td>$24.00</td>
+                    <td data-ack-field="unitPrice">$24.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Delivery date</th>
+                    <td>Nov 18</td>
+                    <td data-ack-field="delivery">Nov 24</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="example-findings" aria-live="polite">
+              <p class="finding-status" data-order-status>
+                2 differences need a closer look
+              </p>
+              <ul data-order-findings>
+                <li>20 fewer units</li>
+                <li>6 days later</li>
+              </ul>
+            </div>
+            <p class="example-scope">
+              Checks quantity, unit price, and delivery date only. Other terms
+              need their usual review.
+            </p>
+            <noscript
+              ><p>
+                This is the sample with differences. Enable JavaScript to switch
+                between examples.
+              </p></noscript
+            >
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <h2>What I Do</h2>
-        <div class="grid">
-          <div class="panel">
-            <h3>Core Services</h3>
-            <ul>
-              <li>Software consulting and architecture</li>
-              <li>Epicor ERP and business system integration</li>
-              <li>Data automation and workflow improvement</li>
-              <li>Troubleshooting, performance, and reliability fixes</li>
-              <li>Clear documentation and practical handoff</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>How I Work</h3>
-            <ul>
-              <li>Direct engagement — you work with me, not layers of staff</li>
-              <li>Clear scope, steady communication, dependable follow-through</li>
-              <li>Security- and reliability-first mindset</li>
-              <li>Solutions built for maintainability, not short-term hacks</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section section--alt">
-      <div class="container">
-        <h2>Selected Work</h2>
-        <p class="body">
-          Examples of the kind of work I deliver (details can be anonymized for your industry and constraints).
-        </p>
-
-        <div class="grid">
-          <div class="panel">
-            <h3>Reporting Workflow Cleanup</h3>
-            <p class="body">
-              Streamlined fragile reporting flows by moving logic into controlled queries/stored procedures and standardized outputs for reliable reuse.
+      </section>
+      <section class="section approach-section" id="approach">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">03 / How we work</p>
+              <h2>Understand it.<br />Build it. Make it dependable.</h2>
+            </div>
+            <p>
+              Work directly with the person building your solution. Clear scope,
+              useful stages, and a practical handoff.
             </p>
           </div>
-
-          <div class="panel">
-            <h3>Integration Stabilization</h3>
-            <p class="body">
-              Reduced recurring failures by adding consistent logging, retries, validation, and clear operational diagnostics for fast support.
-            </p>
+          <div class="approach-steps">
+            <article>
+              <span class="step-number">01 / UNDERSTAND</span>
+              <h3>Start with the actual work.</h3>
+              <p>
+                Walk through the process, the people, the systems, and the
+                exceptions. Agree on what a useful result looks like.
+              </p>
+            </article>
+            <article>
+              <span class="step-number">02 / BUILD</span>
+              <h3>Make the next step concrete.</h3>
+              <p>
+                Deliver in bounded, working stages. Test the normal path and the
+                difficult cases with the people who will use it.
+              </p>
+            </article>
+            <article>
+              <span class="step-number">03 / MAKE IT LAST</span>
+              <h3>Leave something dependable.</h3>
+              <p>
+                Document how it works, make failures visible, and provide the
+                knowledge your team needs to maintain it.
+              </p>
+            </article>
           </div>
-
-          <div class="panel">
-            <h3>Performance &amp; Reliability Fixes</h3>
-            <p class="body">
-              Improved slow SQL and removed common failure patterns with indexing, query tuning, and predictable job execution behavior.
+          <div class="technical-foundation">
+            <p class="eyebrow">The technical foundation</p>
+            <p>
+              Our development stack spans
+              <strong
+                >Python, TypeScript, JavaScript, C#/.NET, Swift, SQL, HTML, and
+                CSS</strong
+              >, with React and Next.js supporting our web applications. We
+              apply these across business software, AI systems, native
+              applications, and our development of Andonity—alongside hands-on
+              Epicor ERP, SQL Server, and API integration work.
             </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="engagement" class="section">
-      <div class="container">
-        <h2>Engagement Options</h2>
-        <div class="grid">
-          <div class="panel">
-            <h3>Project</h3>
-            <ul>
-              <li>Fixed scope, clear deliverables</li>
-              <li>Best for integrations, dashboards, migrations</li>
-              <li>Documentation + handoff included</li>
-            </ul>
+      </section>
+      <section class="section andonity-section" id="andonity">
+        <div class="container andonity-grid">
+          <div class="andonity-identity">
+            <p class="eyebrow">04 / What we’re developing</p>
+            <div class="andonity-wordmark">
+              <img
+                src="assets/andonity.svg"
+                width="70"
+                height="70"
+                alt=""
+              /><span>Andonity</span>
+            </div>
+            <p>A platform by<br />Next Level Software Solutions.</p>
+            <span class="development-label"
+              ><span class="status-dot" aria-hidden="true"></span> In
+              development</span
+            >
           </div>
-
-          <div class="panel">
-            <h3>Retainer</h3>
-            <ul>
-              <li>Ongoing improvements and support</li>
-              <li>Priority scheduling</li>
-              <li>Ideal for continuous optimization</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>Advisory</h3>
-            <ul>
-              <li>Architecture + roadmap guidance</li>
-              <li>Design reviews and risk reduction</li>
-              <li>Quick clarity for technical decisions</li>
-            </ul>
+          <div class="andonity-copy">
+            <h2>A more capable way<br />to work together.</h2>
+            <p>
+              Andonity is the platform we’re developing to help organizations
+              make their knowledge, business rules, responsibilities, and work
+              more explicit and usable.
+            </p>
+            <p>
+              Our aim is to connect organizational understanding with
+              accountable action—helping people and AI carry work forward with
+              clear authority, persistent context, and evidence of what
+              happened.
+            </p>
+            <a class="text-link" href="https://andonity.com/"
+              >Explore Andonity <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--alt">
-      <div class="container">
-        <h2>About</h2>
-        <p class="body">
-          Next Level Software Solutions LLC provides focused, hands-on software consulting for teams that need measurable outcomes.
-          I help organizations modernize workflows, improve reporting, and integrate systems in a way that’s dependable, maintainable,
-          and aligned with real business needs — with a reliability-first approach and clear documentation.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-
-        <div class="contact">
-          <div class="contact__left">
-            <div class="contact__name">Michael Jackson</div>
-            <div class="contact__role">Software Consultant</div>
-            <div class="contact__location">Santa Clarita, CA</div>
-            <p class="body" style="margin-top: 12px;">
-              Send a quick note with what you’re trying to fix and I’ll reply with next steps.
+      </section>
+      <section class="section about-section">
+        <div class="container about-grid">
+          <p class="eyebrow">An independent technical partner</p>
+          <div>
+            <h2>Practical engineering.<br />Personal responsibility.</h2>
+            <p>
+              Next Level Software Solutions LLC is led by Michael Jackson, a
+              software solutions architect based in Santa Clarita, California.
+            </p>
+            <p>
+              We bring hands-on engineering and a practical understanding of
+              business operations to each engagement. That means asking useful
+              questions, making technical decisions understandable, and building
+              software that remains dependable after the initial delivery.
             </p>
           </div>
-
-          <div class="contact__right">
-            <a class="contact__item" href="mailto:michael@nextlevelsoftwaresolutions.com">
-              <span class="icon" aria-hidden="true">✉</span>
-              <span>michael@nextlevelsoftwaresolutions.com</span>
-            </a>
-            <a class="contact__item" href="tel:+16617556602">
-              <span class="icon" aria-hidden="true">☎</span>
-              <span>(661) 755-6602</span>
-            </a>
-            <a class="contact__item" href="https://www.nextlevelsoftwaresolutions.com" target="_blank" rel="noreferrer">
-              <span class="icon" aria-hidden="true">🌐</span>
-              <span>nextlevelsoftwaresolutions.com</span>
-            </a>
+        </div>
+      </section>
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Let’s make the next step concrete</p>
+            <h2>What are you<br />trying to accomplish?</h2>
+            <p>
+              Tell us what is slowing your team down, what needs to connect, or
+              what you would like to build.
+            </p>
+            <a
+              class="button button-primary"
+              href="mailto:michael@nextlevelsoftwaresolutions.com?subject=Let%E2%80%99s%20discuss%20a%20project"
+              >Start a conversation <span aria-hidden="true">↗</span></a
+            >
+            <p class="contact-note">Opens your email app.</p>
+          </div>
+          <div class="contact-details">
+            <span class="eyebrow">Your point of contact</span>
+            <h3>Michael Jackson</h3>
+            <p>Software Solutions Architect<br />Santa Clarita, California</p>
+            <a href="mailto:michael@nextlevelsoftwaresolutions.com"
+              >michael@nextlevelsoftwaresolutions.com
+              <span aria-hidden="true">↗</span></a
+            ><a href="tel:+16617556602"
+              >(661) 755-6602 <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
-
-        <!-- Simple no-backend form: opens an email draft -->
-        <form id="contactForm" class="panel" style="margin-top: 18px;">
-          <h3>Quick Message</h3>
-          <div style="display:grid; gap:10px; margin-top:10px;">
-            <label>
-              <span class="body">Name</span><br />
-              <input id="cfName" type="text" autocomplete="name" required style="width:100%; padding:10px; border-radius:10px;" />
-            </label>
-
-            <label>
-              <span class="body">Email</span><br />
-              <input id="cfEmail" type="email" autocomplete="email" required style="width:100%; padding:10px; border-radius:10px;" />
-            </label>
-
-            <label>
-              <span class="body">What are you trying to solve?</span><br />
-              <textarea id="cfMessage" rows="5" required style="width:100%; padding:10px; border-radius:10px;"></textarea>
-            </label>
-
-            <button class="btn btn--primary" type="submit">Send</button>
-          </div>
-        </form>
-
-        <footer class="footer">
-          <div>© <span id="year"></span> Next Level Software Solutions LLC</div>
-        </footer>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand" href="#top"
+          ><img src="assets/logo-mark.png" width="40" height="40" alt="" /><span
+            >Next Level<small>Software Solutions LLC</small></span
+          ></a
+        >
+        <p>Software that works.<br />Systems that work together.</p>
+        <a class="text-link" href="automation-checkup.html"
+          >Find your first useful automation
+          <span aria-hidden="true">↗</span></a
+        >
       </div>
-    </section>
-  </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // No backend needed: open an email draft with the form contents.
-    const form = document.getElementById("contactForm");
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const name = document.getElementById("cfName").value.trim();
-        const email = document.getElementById("cfEmail").value.trim();
-        const message = document.getElementById("cfMessage").value.trim();
-
-        const subject = encodeURIComponent("Website Inquiry");
-        const body = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n`
-        );
-
-        window.location.href = `mailto:michael@nextlevelsoftwaresolutions.com?subject=${subject}&body=${body}`;
-      });
-    }
-  </script>
-</body>
+      <div class="container footer-bottom">
+        <span
+          >© <span data-year>2026</span> Next Level Software Solutions
+          LLC</span
+        ><span>Andonity is a DBA of Next Level Software Solutions LLC.</span
+        ><a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+    <noscript
+      ><style>
+        .menu-toggle {
+          display: none;
+        }
+        @media (max-width: 850px) {
+          .site-nav {
+            display: flex;
+            position: static;
+            flex-wrap: wrap;
+          }
+          .header-inner {
+            flex-wrap: wrap;
+          }
+        }
+      </style></noscript
+    >
+  </body>
 </html>
