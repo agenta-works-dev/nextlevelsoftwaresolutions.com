@@ -1,6 +1,6 @@
 # Next Level Software Solutions
 
-The company website and the free **Find Your First Useful Automation** checkup. It uses static HTML, CSS, and browser JavaScript, retaining the repository’s existing root deployment and `CNAME`. No build, application server, account system, or API key is needed.
+The company website, the free **Supplier Acknowledgement Check**, and the separate **Find Your First Useful Automation** planning questionnaire. It uses static HTML, CSS, and browser JavaScript, retaining the repository’s existing root deployment and `CNAME`. No build, application server, account system, or API key is needed.
 
 ## Preview
 
@@ -10,7 +10,15 @@ From this directory:
 python3 -m http.server 8796 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8796/`. The checkup is at `/automation-checkup.html`; the completed manufacturing example is at `/automation-checkup.html?example=order-acknowledgement`. Use an HTTP server rather than opening the source HTML with a `file:` URL, because the site uses JavaScript modules.
+Open `http://127.0.0.1:8796/`. The working comparison is at `/order-check.html`. The planning questionnaire is at `/automation-checkup.html`; the completed planning example is at `/automation-checkup.html?example=order-acknowledgement`. Use an HTTP server rather than opening the source HTML with a `file:` URL, because the site uses JavaScript modules.
+
+## Working comparison
+
+- Opens with editable, illustrative sample rows and actual comparison results. Visitors can enter their own purchase order and acknowledgement lines, add/remove lines, or import CSV/tab-separated spreadsheet rows. The downloadable sample provides the required five-column format; no document parsing or AI inference is claimed.
+- Matches exact, unique line IDs and checks part number, quantity, unit price, and delivery date. Flags missing and extra lines. Case and leading zeros are significant. For split deliveries, use distinct scheduled-line IDs on both sides.
+- Rejects malformed spreadsheets, duplicate IDs, blank fields, invalid dates, negative values, excessive precision, and more than 100 lines per source. Quantities use up to three decimal places; prices use up to four. Comparisons use scaled integers to avoid floating-point price differences. Both sources must use the same currency and units; there are no unit conversions, taxes, freight, or order approvals.
+- Entries stay in the page's memory. Edits clear previous findings and disable export until a successful comparison. Nothing is submitted or retained by the application; refresh resets the sample. Hosting may add ordinary traffic analytics. No supplier communication, ERP connection, or order modification occurs.
+- Visitors can download a self-contained HTML report containing findings and both source snapshots, copy a text summary (with a manual-copy fallback), or print/save the current findings as PDF. HTML exports escape visitor input and contain no scripts or remote resources.
 
 ## Checkup behavior
 
@@ -32,12 +40,15 @@ npm run check
 git diff --check
 ```
 
-The tests cover recommendation choices, human decision ownership, sensitive-data preparation, baseline calculations, validation bounds, inert HTML exports, and the order comparison. Browser QA should include the four-step flow, missing required fields, a missing systems selection, draft refresh/edit/clear, sample switching, download/copy/print, keyboard navigation, and phone layouts.
+The tests cover recommendation choices, human decision ownership, sensitive-data preparation, baseline calculations, validation bounds, inert HTML exports, strict spreadsheet parsing, missing/extra/mismatched lines, and decimal/date comparison. Browser QA should include edited inputs invalidating results, valid/invalid imports, matching data, missing rows, report download/copy/print, keyboard navigation, phone layouts, and navigation to the planning questionnaire.
 
 ## Source map
 
 - `index.html`, `styles.css`: company positioning, services, sample comparison, Andonity, contact.
-- `automation-checkup.html`, `checkup.css`: the free tool and its responsive/print presentation.
+- `order-check.html`, `order-check.css`: the working free comparison and responsive/print presentation.
+- `scripts/order-check-model.js`: bounded spreadsheet parsing, validation, comparison, and portable reports.
+- `scripts/order-check.js`: editable rows, import, result invalidation, and user-triggered exports.
+- `automation-checkup.html`, `checkup.css`: the planning questionnaire and its responsive/print presentation.
 - `scripts/checkup-model.js`: validation, recommendations, rendering, and portable exports.
 - `scripts/checkup.js`: form navigation, tab draft storage, and user-triggered exports.
 - `scripts/order-example.js`, `scripts/site.js`: the fixed sample comparison and navigation.
@@ -51,4 +62,4 @@ Andonity is identified as in development. This site does not claim general avail
 
 Production is published from `main` through the repository’s existing GitHub Pages workflow and Cloudflare custom domain. Review and merge changes through the repository’s normal process; no DNS change or new hosting infrastructure is needed.
 
-The stylesheet links use a `v` query parameter containing the first 12 characters of the file’s SHA-256. Update that value in the HTML whenever its stylesheet changes. This prevents the hosting cache from pairing new HTML with a previously cached stylesheet.
+The stylesheet links use a `v` query parameter containing the first 12 characters of the file’s SHA-256. The order comparison's script and its model import use the same convention. Update those values when changing the corresponding files (model first, then UI script, then HTML). This prevents the hosting cache from pairing new HTML with previously cached assets.
