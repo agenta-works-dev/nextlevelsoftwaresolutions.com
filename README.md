@@ -17,7 +17,7 @@ Open `http://127.0.0.1:8796/`. The checkup is at `/automation-checkup.html`; the
 - Four steps collect the workflow, effort, systems, pattern, and review boundaries.
 - A structured, deterministic checklist recommends an integration, rules, AI-assisted intake, reporting, workflow coordination, an internal application, or human-led decision support. The checkup itself does not call an AI model or imply that a service has analyzed real records.
 - Current effort is calculated in the period the visitor enters. It is never presented as predicted savings.
-- Answers remain in the current browser tab’s `sessionStorage`. There is no submission endpoint, analytics, remote storage, or external JavaScript/font dependency. A visitor explicitly chooses whether to download, copy, print, or open an email draft containing a short summary.
+- Answers remain in the current browser tab’s `sessionStorage`. The application has no submission endpoint, application analytics, remote storage, or external JavaScript/font dependency. The hosting layer may add traffic analytics and email-obfuscation scripts. A visitor explicitly chooses whether to download, copy, print, or open an email draft containing a short summary.
 - The download is a self-contained HTML brief with print styles and company contact details. It can be reopened independently and printed to PDF. The summary can be copied, with a selectable-text fallback if clipboard access is unavailable.
 - The completed example is labeled illustrative. It does not overwrite a visitor’s own saved draft. Editing the sample turns it into a normal draft; starting a personal checkup returns to any previous personal draft.
 - The homepage example compares three fixed sample fields using explicit rules. It does not parse uploaded documents, contact suppliers, integrate with an ERP, or modify orders.
@@ -49,4 +49,6 @@ Andonity is identified as in development. This site does not claim general avail
 
 ## Publication
 
-The rebuild is prepared on a review branch. The existing root files and custom-domain setting remain compatible with the current static hosting arrangement. Review and merge through the repository’s normal process when the new content is accepted; this project does not change DNS or provision hosting infrastructure.
+Production is published from `main` through the repository’s existing GitHub Pages workflow and Cloudflare custom domain. Review and merge changes through the repository’s normal process; no DNS change or new hosting infrastructure is needed.
+
+The stylesheet links use a `v` query parameter containing the first 12 characters of the file’s SHA-256. Update that value in the HTML whenever its stylesheet changes. This prevents the hosting cache from pairing new HTML with a previously cached stylesheet.
