@@ -7,7 +7,7 @@
 >
   <rect width="1200" height="630" fill="#f5f6f2" />
   <path d="M0 106H1200M0 550H1200" stroke="#d7deda" />
-  <image href="logo-mark.png" x="65" y="23" width="60" height="60" />
+  <image href="logo-mark.svg" x="65" y="23" width="60" height="60" />
   <g fill="#142e3d" font-family="Avenir Next, Avenir, Arial, sans-serif">
     <text x="140" y="50" font-size="25" font-weight="600">Next Level</text>
     <text x="140" y="72" font-size="12">Software Solutions LLC</text>

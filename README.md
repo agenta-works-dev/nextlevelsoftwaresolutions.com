@@ -41,7 +41,7 @@ The tests cover recommendation choices, human decision ownership, sensitive-data
 - `scripts/checkup-model.js`: validation, recommendations, rendering, and portable exports.
 - `scripts/checkup.js`: form navigation, tab draft storage, and user-triggered exports.
 - `scripts/order-example.js`, `scripts/site.js`: the fixed sample comparison and navigation.
-- `assets/logo-mark.png`: original company logo, retained unchanged.
+- `assets/logo-mark.svg`: editable vector reconstruction of the supplied Next Level logo, with the left stem restored to the baseline. It uses vector paths, gradients, and a transparency mask; it has no embedded raster image or external resources. The PNG, favicon, and touch-icon assets are exports of this SVG.
 - `assets/andonity.svg`: supplied Andonity mark, retained unchanged from the existing Andonity website source.
 - `assets/social-preview.svg`: editable source for the PNG used in shared links. Rasterize at 1200 × 630 after changing it.
 
