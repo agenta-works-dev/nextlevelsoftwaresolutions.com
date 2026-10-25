@@ -1,0 +1,27 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="1200"
+  height="630"
+  viewBox="0 0 1200 630"
+>
+  <rect width="1200" height="630" fill="#f5f6f2" />
+  <path d="M0 106H1200M0 550H1200" stroke="#d7deda" />
+  <image href="logo-mark.svg" x="65" y="23" width="60" height="60" />
+  <g fill="#142e3d" font-family="Avenir Next, Avenir, Arial, sans-serif">
+    <text x="140" y="50" font-size="25" font-weight="600">Next Level</text>
+    <text x="140" y="72" font-size="12">Software Solutions LLC</text>
+    <text x="75" y="170" font-size="13" font-weight="600" letter-spacing="3">
+      SOFTWARE. SYSTEMS. PRACTICAL AI.
+    </text>
+    <g font-size="69" font-weight="600" letter-spacing="-3">
+      <text x="70" y="270">Better software.</text>
+      <text x="70" y="351">Connected systems.</text>
+      <text x="70" y="432" fill="#2154c5">More capable businesses.</text>
+    </g>
+    <text x="75" y="592" font-size="17">nextlevelsoftwaresolutions.com</text>
+    <text x="1125" y="593" font-size="32" text-anchor="end" fill="#2154c5">
+      ↗
+    </text>
+  </g>
+</svg>

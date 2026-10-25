@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Next Level Software Solutions</title>
+  <desc id="logo-description">A blue N with both stems extending to the baseline, crossed by an upward sweeping arrow.</desc>
+  <defs>
+    <linearGradient id="n-body" gradientUnits="userSpaceOnUse" x1="76" y1="142" x2="287" y2="291">
+      <stop offset="0" stop-color="#001345"/>
+      <stop offset=".36" stop-color="#10347e"/>
+      <stop offset=".72" stop-color="#285b9e"/>
+      <stop offset="1" stop-color="#123b83"/>
+    </linearGradient>
+    <linearGradient id="n-right" gradientUnits="userSpaceOnUse" x1="263" y1="135" x2="280" y2="319">
+      <stop offset="0" stop-color="#66abe0"/>
+      <stop offset=".34" stop-color="#3c83c5"/>
+      <stop offset=".72" stop-color="#22559c"/>
+      <stop offset="1" stop-color="#103675"/>
+    </linearGradient>
+    <linearGradient id="arrow-blue" gradientUnits="userSpaceOnUse" x1="96" y1="294" x2="287" y2="42">
+      <stop offset="0" stop-color="#001342"/>
+      <stop offset=".24" stop-color="#103c87"/>
+      <stop offset=".54" stop-color="#3475b7"/>
+      <stop offset=".72" stop-color="#6db0df"/>
+      <stop offset="1" stop-color="#164783"/>
+    </linearGradient>
+    <path id="arrow-shape" d="M7 303C121 293 248 204 300 74L326 89L316 7L240 57L263 63C238 144 150 245 7 303Z"/>
+    <mask id="n-clearance" maskUnits="userSpaceOnUse" x="0" y="0" width="338" height="338" style="mask-type:luminance">
+      <path fill="white" d="M0 0H338V338H0Z"/>
+      <use href="#arrow-shape" fill="black" stroke="black" stroke-width="15" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <g transform="translate(11 13)">
+    <g mask="url(#n-clearance)" stroke="#0b2d68" stroke-width="1.25" stroke-linejoin="miter">
+      <path fill="url(#n-body)" d="M71 103H139L182 161L145 200L120 166V319H71Z"/>
+      <path fill="url(#n-right)" d="M252 195L301 123V319H241L189 253L228 222L252 258Z"/>
+    </g>
+    <use href="#arrow-shape" fill="url(#arrow-blue)" stroke="#17477d" stroke-width="1.25" stroke-linejoin="miter"/>
+  </g>
+</svg>

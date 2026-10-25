@@ -1,0 +1,13 @@
+{
+  "name": "next-level-software-solutions",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check scripts/checkup-model.js && node --check scripts/checkup.js && node --check scripts/site.js && node --check scripts/order-example.js"
+  }
+}
