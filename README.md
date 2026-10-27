@@ -1,6 +1,24 @@
 # Next Level Software Solutions
 
-The company website, the free **Supplier Acknowledgement Check**, and the separate **Find Your First Useful Automation** planning questionnaire. It uses static HTML, CSS, and browser JavaScript, retaining the repository’s existing root deployment and `CNAME`. No build, application server, account system, or API key is needed.
+The company website, the free **Supplier Acknowledgement Check**, and the separate **Find Your First Useful Automation** planning questionnaire. The existing published pages use static HTML, CSS, and browser JavaScript, retaining the repository’s root deployment and `CNAME`.
+
+The revised **Intelligent Order Checker** is a separate, unpublished review application at `order-check-next.html`. It reads original PDF/image/XLSX/CSV documents, displays source references, asks clarification questions, compares normalized values deterministically, and saves optional versioned profiles in the browser. Live interpretation needs a private Qwen or OpenAI API credential and the included server/API. Recorded readings from actual AI extraction are labeled separately and replay without a new AI call.
+
+## Revised checker review
+
+Use Node 22.13 or later (Node 24 recommended):
+
+```sh
+npm ci
+npm run build
+npm run dev
+```
+
+Open `http://127.0.0.1:8797/order-check-next.html`. Copy `server/private-settings.example` to `../../work/order-checker-private/settings.env` for private API configuration; never put credentials inside the website directory. Restart the review server after changing private settings.
+
+`npm run verify:samples` verifies the actual sample formats and prepared interpretation workflow without a paid call. `npm run verify:ai` makes four real provider calls against the fictional samples, records receipts and token costs, and checks extraction/comparison/profile reuse. OpenAI GPT-6.1 Terra has passed those four live sample cases and a real browser upload. This is bounded evidence, not a general accuracy guarantee.
+
+See [the architecture, limits and deployment instructions](docs/ORDER-CHECKER-DEPLOYMENT.md) and [the acceptance record](docs/ORDER-CHECKER-ACCEPTANCE.md). The current `order-check.html`, homepage links, and live deployment are intentionally unchanged. Publication requires Michael’s review and explicit deployment authorization.
 
 ## Preview
 
@@ -32,7 +50,7 @@ Open `http://127.0.0.1:8796/`. The working comparison is at `/order-check.html`.
 
 ## Validation
 
-Node 20 or later is needed only for development checks:
+Node 22.13 or later is needed for development checks and the revised checker:
 
 ```sh
 npm test
@@ -60,6 +78,6 @@ Andonity is identified as in development. This site does not claim general avail
 
 ## Publication
 
-Production is published from `main` through the repository’s existing GitHub Pages workflow and Cloudflare custom domain. Review and merge changes through the repository’s normal process; no DNS change or new hosting infrastructure is needed.
+The existing static production site is published from `main` through GitHub Pages and the Cloudflare custom domain. The revised checker also needs its private API deployed and configured; follow the separate deployment instructions after review and authorization.
 
 The stylesheet links use a `v` query parameter containing the first 12 characters of the file’s SHA-256. The order comparison's script and its model import use the same convention. Update those values when changing the corresponding files (model first, then UI script, then HTML). This prevents the hosting cache from pairing new HTML with previously cached assets.

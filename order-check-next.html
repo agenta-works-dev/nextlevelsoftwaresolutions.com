@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f5f6f2" />
+    <title>
+      Intelligent Order Checker — Review | Next Level Software Solutions
+    </title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="description"
+      content="Review version: understand purchase orders and acknowledgements, resolve ambiguities, compare grounded values, and reuse confirmed document profiles."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
+    <link rel="stylesheet" href="styles.css?v=9fd8cbcca8ff" />
+    <link rel="stylesheet" href="order-documents.css?v=72d7e35bde63" />
+    <script
+      type="module"
+      src="assets/order-checker/app.js?v=1578eb7766d0"
+    ></script>
+  </head>
+  <body class="document-checker-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Next Level Software Solutions home"
+          ><img src="assets/logo-mark.svg" width="48" height="48" alt="" /><span
+            >Next Level<small>Software Solutions LLC</small></span
+          ></a
+        >
+        <div class="document-header-links">
+          <span class="review-badge">Review version</span
+          ><a class="text-link" href="order-check.html">Current checker ↗</a>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="container document-main">
+      <section class="document-intro">
+        <div>
+          <p class="eyebrow">
+            <span class="tiny-square" aria-hidden="true"></span> A small example
+            of a bigger possibility
+          </p>
+          <h1>
+            Different documents.<br /><span>A clearer understanding.</span>
+          </h1>
+        </div>
+        <div>
+          <p>
+            Bring an order and a supplier’s reply. Find the important
+            information, resolve what’s unclear, and see what changed—with a
+            path back to the source.
+          </p>
+          <p class="intro-note">
+            Then keep the confirmed learning for next time.
+          </p>
+          <a class="text-link sample-jump" href="#sample-heading"
+            >No files ready? Try a real example ↓</a
+          >
+        </div>
+      </section>
+      <ol class="document-steps" aria-label="Order checker workflow">
+        <li data-progress="upload" aria-current="step">
+          <span>01</span> Bring the documents
+        </li>
+        <li data-progress="questions"><span>02</span> Clarify what matters</li>
+        <li data-progress="results"><span>03</span> Compare &amp; learn</li>
+      </ol>
+      <noscript
+        ><div class="notice">
+          This tool needs JavaScript to read documents and compare the results.
+          <a href="order-check.html">Use the existing checker</a>.
+        </div></noscript
+      >
+      <div class="status-notice" data-service-status role="status">
+        Checking the private review service…
+      </div>
+      <section class="upload-workspace" aria-labelledby="upload-heading">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">01 / Start with the originals</p>
+            <h2 id="upload-heading">Two documents. No reformatting.</h2>
+          </div>
+          <button class="small-action" type="button" data-clear-session>
+            Remove session information
+          </button>
+        </div>
+        <p class="workspace-help">
+          Use redacted copies. PDF, scanned PDF, PNG, JPEG, WebP, XLSX, CSV, or
+          TSV. Up to 10 MB and 8 pages per document; up to 40 item lines in the
+          pair. Legacy XLS, HEIC, TIFF, and macro-enabled workbooks need a
+          supported copy.
+        </p>
+        <div class="document-upload-grid">
+          <section class="document-upload" data-slot="po">
+            <div class="source-topline">
+              <span class="eyebrow">THE PURCHASE ORDER</span
+              ><span class="source-state" data-file-state="po"
+                >Not selected</span
+              >
+            </div>
+            <label class="drop-target" data-drop="po"
+              ><span class="upload-symbol" aria-hidden="true">↑</span
+              ><strong>Select an order</strong
+              ><span>or drop the original file here</span
+              ><input
+                type="file"
+                id="file-po"
+                accept=".pdf,.png,.jpg,.jpeg,.webp,.xlsx,.csv,.tsv"
+                aria-label="Purchase order document"
+            /></label>
+            <div class="selected-document" data-file-info="po" hidden></div>
+            <label class="ownership-choice"
+              ><input type="checkbox" id="own-po" /> This is one of our own
+              standard forms</label
+            ><label class="hidden-sheet-choice" hidden data-hidden-choice="po"
+              ><input type="checkbox" id="hidden-po" /> Also include hidden
+              worksheets</label
+            ><button
+              type="button"
+              class="small-action"
+              data-preview="po"
+              hidden
+            >
+              Inspect the order ↗
+            </button>
+          </section>
+          <section class="document-upload" data-slot="ack">
+            <div class="source-topline">
+              <span class="eyebrow">THE SUPPLIER ACKNOWLEDGEMENT</span
+              ><span class="source-state" data-file-state="ack"
+                >Not selected</span
+              >
+            </div>
+            <label class="drop-target" data-drop="ack"
+              ><span class="upload-symbol" aria-hidden="true">↑</span
+              ><strong>Select the reply</strong
+              ><span>or drop the original file here</span
+              ><input
+                type="file"
+                id="file-ack"
+                accept=".pdf,.png,.jpg,.jpeg,.webp,.xlsx,.csv,.tsv"
+                aria-label="Supplier acknowledgement document"
+            /></label>
+            <div class="selected-document" data-file-info="ack" hidden></div>
+            <label class="ownership-choice"
+              ><input type="checkbox" id="own-ack" /> This is one of our own
+              standard forms</label
+            ><label class="hidden-sheet-choice" hidden data-hidden-choice="ack"
+              ><input type="checkbox" id="hidden-ack" /> Also include hidden
+              worksheets</label
+            ><button
+              type="button"
+              class="small-action"
+              data-preview="ack"
+              hidden
+            >
+              Inspect the acknowledgement ↗
+            </button>
+          </section>
+        </div>
+        <div class="processing-disclosure">
+          <div>
+            <p class="eyebrow">Your documents, your choice</p>
+            <p data-provider-disclosure>
+              Files are read locally first. Live interpretation sends selected
+              document text and rendered pages to the configured AI provider.
+              Originals and learned profiles are not stored on our server.
+            </p>
+            <label class="consent-choice"
+              ><input type="checkbox" id="processing-consent" /> I am using
+              redacted copies and agree to the stated AI processing.</label
+            >
+            <p class="fine-print">
+              One free AI interpretation per browser, with network and overall
+              usage limits. Your clarifying answers and calculations stay local.
+              An admitted AI request uses the free allowance even if the
+              provider cannot finish; there are no automatic paid retries.
+              <a href="#privacy-details">Processing and retention details ↓</a>
+            </p>
+          </div>
+          <div class="interpret-actions">
+            <div data-human-verification></div>
+            <button
+              class="button button-primary"
+              type="button"
+              data-interpret
+              disabled
+            >
+              Understand these documents <span aria-hidden="true">↗</span>
+            </button>
+            <p class="fine-print" data-analysis-note>
+              No AI request has been made.
+            </p>
+          </div>
+        </div>
+        <div class="busy-panel" data-busy hidden role="status">
+          <span class="processing-dot" aria-hidden="true"></span>
+          <div>
+            <strong data-busy-title>Reading the documents…</strong>
+            <p data-busy-description>
+              Looking for meaningful fields and their source locations.
+            </p>
+          </div>
+          <button type="button" class="small-action" data-cancel>Cancel</button>
+        </div>
+        <div
+          class="document-error"
+          data-error
+          hidden
+          role="alert"
+          tabindex="-1"
+        ></div>
+      </section>
+      <section class="sample-library" aria-labelledby="sample-heading">
+        <div>
+          <p class="eyebrow">No files ready?</p>
+          <h2 id="sample-heading">Try the learning demonstration.</h2>
+          <p>
+            Different layouts and terminology. Real files containing fictional
+            business data. Recorded AI sample readings let you explore
+            questions, comparisons, and profile reuse without an AI charge.
+          </p>
+        </div>
+        <div class="sample-options">
+          <button type="button" data-sample="units">
+            <span class="sample-number">01</span
+            ><span
+              ><strong>The box that needs an explanation</strong
+              ><small
+                >Purchase order PDF + supplier Excel form · Part mapping and
+                packaging</small
+              ></span
+            ><span aria-hidden="true">↗</span></button
+          ><button type="button" data-sample="split">
+            <span class="sample-number">02</span
+            ><span
+              ><strong>One order. Two promised deliveries.</strong
+              ><small
+                >Purchase order PDF + scanned acknowledgement image · Split
+                schedules</small
+              ></span
+            ><span aria-hidden="true">↗</span></button
+          ><button type="button" data-sample="unfamiliar">
+            <span class="sample-number">03</span
+            ><span
+              ><strong>An unfamiliar release and a dispatch advice</strong
+              ><small
+                >Excel release + differently structured CSV · Pricing basis and
+                date meaning</small
+              ></span
+            ><span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+      <section
+        class="interpretation-section"
+        data-interpretation
+        hidden
+        aria-labelledby="interpretation-heading"
+        tabindex="-1"
+      >
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">02 / Understand before comparing</p>
+            <h2 id="interpretation-heading">Here’s what we found.</h2>
+          </div>
+          <span class="interpretation-badge" data-interpretation-badge></span>
+        </div>
+        <p class="workspace-help" data-interpretation-summary></p>
+        <div class="document-summary-grid" data-document-summaries></div>
+        <aside
+          class="sample-context"
+          data-sample-context
+          hidden
+          aria-label="Fictional scenario context"
+        ></aside>
+        <details class="extracted-details">
+          <summary>Review or correct extracted readings</summary>
+          <p class="fine-print">
+            A source link locates the evidence; it does not establish document
+            authenticity. Image readings remain AI transcriptions until you
+            confirm them.
+          </p>
+          <div data-extracted-fields></div>
+        </details>
+        <div class="questions-panel" data-questions-panel>
+          <div class="questions-title">
+            <div>
+              <p class="eyebrow">A few things only you can clarify</p>
+              <h3 data-question-heading>
+                Let’s resolve the important ambiguities.
+              </h3>
+            </div>
+            <span data-question-count></span>
+          </div>
+          <div data-questions></div>
+          <button class="small-action" type="button" data-skip-questions>
+            Keep unresolved items visible and review the comparison ↓
+          </button>
+        </div>
+      </section>
+      <section
+        class="document-results"
+        data-comparison
+        hidden
+        aria-labelledby="comparison-heading"
+        tabindex="-1"
+      >
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">03 / Compare the understood information</p>
+            <h2 id="comparison-heading">The details, and why they matter.</h2>
+          </div>
+          <span class="result-state" data-result-state></span>
+        </div>
+        <div class="comparison-counts" data-comparison-counts></div>
+        <p class="workspace-help">
+          Calculations use explicit values and confirmed interpretation rules.
+          Shipment and delivery dates, different currencies, and unconfirmed
+          packaging are kept distinct.
+        </p>
+        <div
+          class="finding-filters"
+          role="group"
+          aria-label="Filter comparison findings"
+        >
+          <button type="button" data-filter="all" aria-pressed="true">
+            Everything</button
+          ><button type="button" data-filter="review" aria-pressed="false">
+            Needs a look</button
+          ><button type="button" data-filter="match" aria-pressed="false">
+            Matching readings</button
+          ><button type="button" data-filter="unresolved" aria-pressed="false">
+            Unresolved
+          </button>
+        </div>
+        <div data-findings></div>
+        <div class="document-export-actions">
+          <button
+            class="button button-secondary"
+            type="button"
+            data-download-report
+          >
+            Download the report <span aria-hidden="true">↓</span></button
+          ><button class="small-action" type="button" data-copy-summary>
+            Copy summary</button
+          ><span role="status" data-export-status></span>
+        </div>
+        <textarea
+          class="copy-fallback"
+          data-copy-fallback
+          readonly
+          hidden
+          aria-label="Select and copy the comparison summary"
+        ></textarea>
+        <details class="interpretation-receipt">
+          <summary>Interpretation and comparison record</summary>
+          <div data-receipt></div>
+        </details>
+        <div class="previous-comparisons" data-previous hidden>
+          <h3>Previous comparison snapshots</h3>
+          <div data-previous-list></div>
+        </div>
+      </section>
+      <section
+        class="learning-section"
+        data-learning
+        hidden
+        aria-labelledby="learning-heading"
+      >
+        <div class="learning-intro">
+          <p class="eyebrow">The useful part that stays useful</p>
+          <h2 id="learning-heading">What the application learned.</h2>
+          <p>
+            Keep discovered layouts separate from confirmed interpretations and
+            business rules. You choose what to reuse. A profile contains
+            mappings and selected rules—not your uploaded documents.
+          </p>
+        </div>
+        <div class="learning-grid" data-learning-documents></div>
+        <div class="repeat-demonstration" data-repeat-panel hidden>
+          <div>
+            <p class="eyebrow">Now see the difference</p>
+            <h3>Another order. A familiar supplier form.</h3>
+            <p>
+              Reuse your saved profile with a new document pair. Previously
+              confirmed rules can remove questions while the application reads
+              different quantities and prices.
+            </p>
+          </div>
+          <button class="button button-mint" type="button" data-repeat>
+            Try another order with this profile
+            <span aria-hidden="true">↗</span>
+          </button>
+          <p class="repeat-metric" data-repeat-metric></p>
+        </div>
+      </section>
+      <details class="profile-library">
+        <summary>
+          Your document profiles <span data-profile-count></span>
+        </summary>
+        <p>
+          Profiles are private to this browser. Saving is optional. Export a
+          profile to keep or move your own copy; we do not pool it with another
+          business’s information.
+        </p>
+        <div data-profile-list></div>
+        <label class="small-action profile-import-label"
+          >Import your profile JSON<input
+            type="file"
+            data-import-profile
+            accept=".json,application/json"
+        /></label>
+        <p class="fine-print" data-profile-message role="status"></p>
+      </details>
+      <section class="document-explanation" id="privacy-details">
+        <div>
+          <p class="eyebrow">Built around the work</p>
+          <h2>Imagine this connected<br />to your actual workflow.</h2>
+          <p>
+            This demonstration covers interpretation, questions, comparison, and
+            reusable learning. A custom solution could connect those steps to
+            your people and systems, with the review and authorization your work
+            requires.
+          </p>
+          <a
+            class="text-link"
+            href="mailto:michael@nextlevelsoftwaresolutions.com?subject=Intelligent%20document%20comparison"
+            >Talk with Michael about your workflow ↗</a
+          >
+        </div>
+        <div>
+          <details open>
+            <summary>What is processed, and where?</summary>
+            <p>
+              Reading a file, displaying its source, answering questions,
+              comparing values, and applying profiles happen in your browser.
+              Live interpretation sends selected text and rendered pages through
+              our server to the AI provider stated before you continue.
+            </p>
+            <p data-retention-detail>
+              Our application does not persist uploaded documents,
+              interpretations, or profiles on the server. Processing uses
+              temporary memory. Provider retention policies still apply and are
+              linked in the processing notice. Minimal usage records enforce the
+              free limit.
+            </p>
+            <p>
+              For public live processing, Cloudflare Turnstile checks for
+              automated abuse after you choose AI processing. Cloudflare
+              receives browser and network metadata under its
+              <a
+                href="https://www.cloudflare.com/privacypolicy/"
+                target="_blank"
+                rel="noreferrer"
+                >privacy policy</a
+              >. The local review and recorded AI sample demonstrations do not
+              load this verification service.
+            </p>
+          </details>
+          <details>
+            <summary>What stays after I leave?</summary>
+            <p>
+              Session documents and readings stay in this page’s memory and are
+              released when you remove the session or close the page. A profile
+              is saved in this browser only when you choose “Save profile”.
+              Removing session information keeps explicitly saved profiles;
+              remove a selected profile separately to forget it.
+            </p>
+          </details>
+          <details>
+            <summary>What can’t this establish?</summary>
+            <p>
+              The tool does not authenticate a document or establish legal
+              equivalence. It does not infer currency exchange rates, approve an
+              order, contact a supplier, or change business records. Unreadable
+              or ambiguous information remains visible. Workbook formulas use
+              saved results; embedded charts and images in workbooks are outside
+              the cell reader.
+            </p>
+          </details>
+          <details>
+            <summary>What does “one free attempt” mean?</summary>
+            <p>
+              One live AI interpretation of an uploaded document pair per
+              browser. Clarifications, local recalculations, report downloads,
+              and the recorded AI sample learning demonstration remain
+              available. Anonymous browser identifiers cannot reliably identify
+              a person across devices or cleared cookies; network and overall
+              limits provide additional abuse protection.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <aside
+      class="source-drawer"
+      data-source-drawer
+      hidden
+      aria-labelledby="source-heading"
+    >
+      <div class="source-drawer-heading">
+        <div>
+          <p class="eyebrow">Back to the source</p>
+          <h2 id="source-heading">Document evidence</h2>
+        </div>
+        <button
+          type="button"
+          class="source-close"
+          data-close-source
+          aria-label="Close document source"
+        >
+          ×
+        </button>
+      </div>
+      <p class="source-file-name" data-source-file></p>
+      <p class="source-location" data-source-location></p>
+      <div class="source-transcription" data-source-quote></div>
+      <div class="source-content" data-source-content></div>
+      <p class="fine-print" data-source-custody></p>
+    </aside>
+    <div class="source-backdrop" data-source-backdrop hidden></div>
+    <dialog class="correction-dialog" data-correction-dialog>
+      <form method="dialog">
+        <div class="correction-heading">
+          <h2>Correct a reading.</h2>
+          <button
+            type="submit"
+            class="source-close"
+            aria-label="Close correction"
+          >
+            ×
+          </button>
+        </div>
+      </form>
+      <form data-correction-form>
+        <p class="fine-print">
+          Enter the value represented by the source. Unit conversions and
+          pricing-basis calculations happen separately. The original AI reading
+          stays in the comparison record.
+        </p>
+        <label
+          >Correct value<input name="value" required maxlength="240" /></label
+        ><label for="correction-source">Source location</label
+        ><select id="correction-source" name="source" required></select
+        ><label
+          >Printed field or column label<input name="label" maxlength="160"
+        /></label>
+        <div data-date-correction hidden>
+          <label for="correction-date-kind">Date meaning</label
+          ><select id="correction-date-kind" name="dateKind">
+            <option value="delivery">Delivery / arrival</option>
+            <option value="shipment">Shipment / departure</option>
+            <option value="unknown">Still uncertain</option>
+          </select>
+        </div>
+        <button class="button button-primary" type="submit">
+          Apply correction ↗
+        </button>
+        <p class="fine-print" data-correction-error role="alert"></p>
+      </form>
+    </dialog>
+    <footer class="container document-footer">
+      <span>© 2026 Next Level Software Solutions LLC</span
+      ><a href="automation-checkup.html">Plan your own automation ↗</a>
+    </footer>
+  </body>
+</html>

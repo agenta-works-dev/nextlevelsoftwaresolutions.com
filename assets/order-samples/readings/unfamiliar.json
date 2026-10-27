@@ -1,0 +1,1094 @@
+{
+  "version": 1,
+  "sample": "unfamiliar",
+  "extraction": {
+    "schemaVersion": 1,
+    "documents": [
+      {
+        "id": "po",
+        "type": "purchase_order",
+        "documentNumber": {
+          "raw": "R-731",
+          "value": "R-731",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:be261b1ae6729c52:s1:F3",
+              "quote": "R-731",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "orderReference": {
+          "raw": "R-731",
+          "value": "R-731",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:be261b1ae6729c52:s1:F3",
+              "quote": "R-731",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "customer": {
+          "raw": "Northstar Demo Manufacturing",
+          "value": "Northstar Demo Manufacturing",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:be261b1ae6729c52:s1:D6",
+              "quote": "Northstar Demo Manufacturing",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "supplier": {
+          "raw": "Meridian Precision Demo",
+          "value": "Meridian Precision Demo",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:be261b1ae6729c52:s1:D5",
+              "quote": "Meridian Precision Demo",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "currency": {
+          "raw": "USD",
+          "value": "USD",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:be261b1ae6729c52:s1:G5",
+              "quote": "USD",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "lines": [
+          {
+            "id": "P1",
+            "dateKind": "delivery",
+            "buyerPart": {
+              "raw": "BR-110",
+              "value": "BR-110",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:B10",
+                  "quote": "BR-110",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "supplierPart": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "description": {
+              "raw": "Mounting bracket, 110 mm",
+              "value": "Mounting bracket, 110 mm",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:C10",
+                  "quote": "Mounting bracket, 110 mm",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "quantity": {
+              "raw": "150",
+              "value": "150",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:D10",
+                  "quote": "150",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:E10",
+                  "quote": "EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unitPrice": {
+              "raw": "200",
+              "value": "200",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:F10",
+                  "quote": "200",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisQuantity": {
+              "raw": "100",
+              "value": "100",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:F9",
+                  "quote": "Rate / 100 EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisUnit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:F9",
+                  "quote": "Rate / 100 EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "extendedPrice": {
+              "raw": "300",
+              "value": "300",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:H10",
+                  "quote": "300",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "currency": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "date": {
+              "raw": "2026-12-05",
+              "value": "2026-12-05",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:be261b1ae6729c52:s1:G10",
+                  "quote": "2026-12-05",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "schedules": [],
+            "notes": []
+          }
+        ],
+        "conditions": [
+          {
+            "raw": "Rates are quoted per 100 EA.",
+            "value": "Rates are quoted per 100 EA.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:B13",
+                "quote": "Rates are quoted per 100 EA.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ]
+          },
+          {
+            "raw": "Want at dock means delivered to our receiving dock.",
+            "value": "Want at dock means delivered to our receiving dock.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:B15",
+                "quote": "Want at dock means delivered to our receiving dock.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ]
+          }
+        ],
+        "mappings": [
+          {
+            "field": "documentNumber",
+            "label": "MATERIAL CALL-OFF",
+            "location": "Material release!F3",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:B3",
+                "quote": "MATERIAL CALL-OFF",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "supplier",
+            "label": "Vendor",
+            "location": "Material release!D5",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:B5",
+                "quote": "Vendor",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "customer",
+            "label": "Customer",
+            "location": "Material release!D6",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:B6",
+                "quote": "Customer",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "currency",
+            "label": "Settlement",
+            "location": "Material release!G5",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:F5",
+                "quote": "Settlement",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.buyerPart",
+            "label": "Material",
+            "location": "Material release column B",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:B9",
+                "quote": "Material",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.description",
+            "label": "What we need",
+            "location": "Material release column C",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:C9",
+                "quote": "What we need",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.quantity",
+            "label": "Call-off",
+            "location": "Material release column D",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:D9",
+                "quote": "Call-off",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unit",
+            "label": "Stk / UOM",
+            "location": "Material release column E",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:E9",
+                "quote": "Stk / UOM",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unitPrice",
+            "label": "Rate / 100 EA",
+            "location": "Material release column F",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:F9",
+                "quote": "Rate / 100 EA",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.priceBasisQuantity",
+            "label": "Rate / 100 EA",
+            "location": "Material release column F header",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:F9",
+                "quote": "Rate / 100 EA",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.priceBasisUnit",
+            "label": "Rate / 100 EA",
+            "location": "Material release column F header",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:F9",
+                "quote": "Rate / 100 EA",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.date",
+            "label": "Want at dock",
+            "location": "Material release column G",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:G9",
+                "quote": "Want at dock",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.extendedPrice",
+            "label": "Net value",
+            "location": "Material release column H",
+            "evidence": [
+              {
+                "anchorId": "po:be261b1ae6729c52:s1:H9",
+                "quote": "Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "id": "ack",
+        "type": "acknowledgement",
+        "documentNumber": {
+          "raw": "M-2001",
+          "value": "M-2001",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:0e3c56c79a0c06eb:s1:B1",
+              "quote": "M-2001",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "orderReference": {
+          "raw": "R-731",
+          "value": "R-731",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:0e3c56c79a0c06eb:s1:B2",
+              "quote": "R-731",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "customer": {
+          "raw": "Northstar Demo Manufacturing",
+          "value": "Northstar Demo Manufacturing",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:0e3c56c79a0c06eb:s1:B4",
+              "quote": "Northstar Demo Manufacturing",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "supplier": {
+          "raw": "Meridian Precision Demo",
+          "value": "Meridian Precision Demo",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:0e3c56c79a0c06eb:s1:B3",
+              "quote": "Meridian Precision Demo",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "currency": {
+          "raw": "USD",
+          "value": "USD",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:0e3c56c79a0c06eb:s1:B5",
+              "quote": "USD",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "lines": [
+          {
+            "id": "A1",
+            "dateKind": "shipment",
+            "buyerPart": {
+              "raw": "BR-110",
+              "value": "BR-110",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:A8",
+                  "quote": "BR-110",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "supplierPart": {
+              "raw": "MP-BR110",
+              "value": "MP-BR110",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:B8",
+                  "quote": "MP-BR110",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "description": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "quantity": {
+              "raw": "150",
+              "value": "150",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:C8",
+                  "quote": "150",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:D8",
+                  "quote": "EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unitPrice": {
+              "raw": "2.10",
+              "value": "2.10",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:E8",
+                  "quote": "2.10",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisQuantity": {
+              "raw": "1",
+              "value": "1",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:E7",
+                  "quote": "Charge for 1 EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisUnit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:E7",
+                  "quote": "Charge for 1 EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "extendedPrice": {
+              "raw": "315.00",
+              "value": "315.00",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:G8",
+                  "quote": "315.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "currency": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "date": {
+              "raw": "2026-12-01",
+              "value": "2026-12-01",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:F8",
+                  "quote": "2026-12-01",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "schedules": [],
+            "notes": []
+          },
+          {
+            "id": "A2",
+            "dateKind": "shipment",
+            "buyerPart": {
+              "raw": "BR-112",
+              "value": "BR-112",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:A9",
+                  "quote": "BR-112",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "supplierPart": {
+              "raw": "MP-BR112",
+              "value": "MP-BR112",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:B9",
+                  "quote": "MP-BR112",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "description": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "quantity": {
+              "raw": "10",
+              "value": "10",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:C9",
+                  "quote": "10",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:D9",
+                  "quote": "EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unitPrice": {
+              "raw": "2.50",
+              "value": "2.50",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:E9",
+                  "quote": "2.50",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisQuantity": {
+              "raw": "1",
+              "value": "1",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:E7",
+                  "quote": "Charge for 1 EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisUnit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:E7",
+                  "quote": "Charge for 1 EA",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "extendedPrice": {
+              "raw": "25.00",
+              "value": "25.00",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:G9",
+                  "quote": "25.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "currency": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "date": {
+              "raw": "2026-12-03",
+              "value": "2026-12-03",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:0e3c56c79a0c06eb:s1:F9",
+                  "quote": "2026-12-03",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "schedules": [],
+            "notes": []
+          }
+        ],
+        "conditions": [
+          {
+            "raw": "Ship dates are departure dates, not arrival commitments.",
+            "value": "Ship dates are departure dates, not arrival commitments.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:B11",
+                "quote": "Ship dates are departure dates, not arrival commitments.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ]
+          }
+        ],
+        "mappings": [
+          {
+            "field": "documentNumber",
+            "label": "Dispatch advice",
+            "location": "CSV!B1",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:A1",
+                "quote": "Dispatch advice",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "orderReference",
+            "label": "Against release",
+            "location": "CSV!B2",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:A2",
+                "quote": "Against release",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "supplier",
+            "label": "Vendor",
+            "location": "CSV!B3",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:A3",
+                "quote": "Vendor",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "customer",
+            "label": "Delivered to",
+            "location": "CSV!B4",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:A4",
+                "quote": "Delivered to",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "currency",
+            "label": "Settlement currency",
+            "location": "CSV!B5",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:A5",
+                "quote": "Settlement currency",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.buyerPart",
+            "label": "Client material",
+            "location": "CSV column A",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:A7",
+                "quote": "Client material",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.supplierPart",
+            "label": "Our reference",
+            "location": "CSV column B",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:B7",
+                "quote": "Our reference",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.quantity",
+            "label": "Accepted",
+            "location": "CSV column C",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:C7",
+                "quote": "Accepted",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unit",
+            "label": "Measure",
+            "location": "CSV column D",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:D7",
+                "quote": "Measure",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unitPrice",
+            "label": "Charge for 1 EA",
+            "location": "CSV column E",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:E7",
+                "quote": "Charge for 1 EA",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.priceBasisQuantity",
+            "label": "Charge for 1 EA",
+            "location": "CSV column E header",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:E7",
+                "quote": "Charge for 1 EA",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.priceBasisUnit",
+            "label": "Charge for 1 EA",
+            "location": "CSV column E header",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:E7",
+                "quote": "Charge for 1 EA",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.date",
+            "label": "Will leave warehouse",
+            "location": "CSV column F",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:F7",
+                "quote": "Will leave warehouse",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.extendedPrice",
+            "label": "Value",
+            "location": "CSV column G",
+            "evidence": [
+              {
+                "anchorId": "ack:0e3c56c79a0c06eb:s1:G7",
+                "quote": "Value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          }
+        ],
+        "warnings": []
+      }
+    ],
+    "links": [
+      {
+        "poIds": [
+          "P1"
+        ],
+        "ackIds": [
+          "A1"
+        ],
+        "reason": "Matching client material BR-110; the acknowledgement references release R-731.",
+        "splitExplicit": false,
+        "evidence": [
+          {
+            "anchorId": "po:be261b1ae6729c52:s1:B10",
+            "quote": "BR-110",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "ack:0e3c56c79a0c06eb:s1:A8",
+            "quote": "BR-110",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "po:be261b1ae6729c52:s1:F3",
+            "quote": "R-731",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "ack:0e3c56c79a0c06eb:s1:B2",
+            "quote": "R-731",
+            "bbox": null,
+            "support": "exact_quote"
+          }
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "receipt": {
+    "provider": "openai",
+    "model": "gpt-6.1-terra",
+    "requestId": "req_6d79d008d955481dbfcbe7420881503d",
+    "generatedAt": "2026-10-26T23:30:42.330Z",
+    "schemaVersion": 1,
+    "usage": {
+      "inputTokens": 6930,
+      "outputTokens": 3151,
+      "estimatedUSD": 0.022685,
+      "basis": "Estimate from provider-reported tokens and configured standard prices; not an invoice."
+    },
+    "sourceHashes": [
+      {
+        "role": "po",
+        "hash": "be261b1ae6729c52284cef67799e9c4a72ab7cb44c26568b100eafe73993e353"
+      },
+      {
+        "role": "ack",
+        "hash": "0e3c56c79a0c06eb06e271faf2c2b6f1f3d542ed9150b90a8e606c39a8e2b59d"
+      }
+    ],
+    "profileVersionsOffered": [],
+    "mode": "recorded"
+  },
+  "notice": "Actual AI extraction recorded from these exact fictional sample files. Replaying it makes no new model call. The visitor supplies clarifications and optionally saves their own profile locally."
+}

@@ -1,0 +1,25 @@
+name = "nlss-order-checker-api"
+main = "server/cloudflare-worker.js"
+compatibility_date = "2026-10-26"
+workers_dev = false
+
+# Do not add a production route or enable public processing until review and approval.
+# After approval, route only nextlevelsoftwaresolutions.com/api/order-checker/*.
+[vars]
+PUBLIC_ENABLED = "false"
+AI_PROVIDER = "openai"
+AI_MODEL = "gpt-6.1-terra"
+ALLOWED_ORIGIN = "https://nextlevelsoftwaresolutions.com"
+MONTHLY_TRIAL_LIMIT = "100"
+DAILY_IP_LIMIT = "5"
+
+[[durable_objects.bindings]]
+name = "TRIAL_LEDGER"
+class_name = "TrialLedger"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["TrialLedger"]
+
+[observability]
+enabled = false

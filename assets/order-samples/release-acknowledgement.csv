@@ -1,0 +1,12 @@
+Dispatch advice;M-2001
+Against release;R-731
+Vendor;Meridian Precision Demo
+Delivered to;Northstar Demo Manufacturing
+Settlement currency;USD
+
+Client material;Our reference;Accepted;Measure;Charge for 1 EA;Will leave warehouse;Value
+BR-110;MP-BR110;150;EA;2.10;2026-12-01;315.00
+BR-112;MP-BR112;10;EA;2.50;2026-12-03;25.00
+
+Conditions;Ship dates are departure dates, not arrival commitments.
+Sample;Synthetic business data only.

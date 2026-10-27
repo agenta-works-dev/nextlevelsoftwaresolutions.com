@@ -1,0 +1,1247 @@
+{
+  "version": 1,
+  "sample": "split",
+  "extraction": {
+    "schemaVersion": 1,
+    "documents": [
+      {
+        "id": "po",
+        "type": "purchase_order",
+        "documentNumber": {
+          "raw": "45084",
+          "value": "45084",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:27564ff0ffc672f1:p1:r4",
+              "quote": "45084",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "orderReference": {
+          "raw": null,
+          "value": null,
+          "certainty": "missing",
+          "issue": null,
+          "evidence": []
+        },
+        "customer": {
+          "raw": "Northstar Demo Manufacturing",
+          "value": "Northstar Demo Manufacturing",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:27564ff0ffc672f1:p1:r6",
+              "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "supplier": {
+          "raw": "Harbor Components",
+          "value": "Harbor Components",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:27564ff0ffc672f1:p1:r5",
+              "quote": "Supplier: Harbor Components Issued: Nov 03, 2026",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "currency": {
+          "raw": "USD",
+          "value": "USD",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:27564ff0ffc672f1:p1:r6",
+              "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "lines": [
+          {
+            "id": "P1",
+            "dateKind": "delivery",
+            "buyerPart": {
+              "raw": "NX-204",
+              "value": "NX-204",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r11",
+                  "quote": "1 NX-204 Aluminum housing rev C 120 EA 24.00 2880.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "supplierPart": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "description": {
+              "raw": "Aluminum housing rev C",
+              "value": "Aluminum housing rev C",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r11",
+                  "quote": "1 NX-204 Aluminum housing rev C 120 EA 24.00 2880.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "quantity": {
+              "raw": "120",
+              "value": "120",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r11",
+                  "quote": "1 NX-204 Aluminum housing rev C 120 EA 24.00 2880.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r11",
+                  "quote": "1 NX-204 Aluminum housing rev C 120 EA 24.00 2880.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unitPrice": {
+              "raw": "24.00",
+              "value": "24.00",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r11",
+                  "quote": "1 NX-204 Aluminum housing rev C 120 EA 24.00 2880.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisQuantity": {
+              "raw": "1",
+              "value": "1",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r13",
+                  "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisUnit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r13",
+                  "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "extendedPrice": {
+              "raw": "2880.00",
+              "value": "2880.00",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r11",
+                  "quote": "1 NX-204 Aluminum housing rev C 120 EA 24.00 2880.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "currency": {
+              "raw": "USD",
+              "value": "USD",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r6",
+                  "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "date": {
+              "raw": "Dec 10, 2026",
+              "value": "Dec 10, 2026",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:27564ff0ffc672f1:p1:r7",
+                  "quote": "Requested arrival: Dec 10, 2026",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "schedules": [],
+            "notes": []
+          }
+        ],
+        "conditions": [
+          {
+            "raw": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+            "value": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r13",
+                "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ]
+          }
+        ],
+        "mappings": [
+          {
+            "field": "documentNumber",
+            "label": "PURCHASE ORDER",
+            "location": "top right",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r2",
+                "quote": "NORTHSTAR PURCHASE ORDER",
+                "bbox": null,
+                "support": "exact_quote"
+              },
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r4",
+                "quote": "45084",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "supplier",
+            "label": "Supplier",
+            "location": "header",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r5",
+                "quote": "Supplier: Harbor Components Issued: Nov 03, 2026",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "customer",
+            "label": "Customer",
+            "location": "header",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r6",
+                "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "currency",
+            "label": "Currency",
+            "location": "header",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r6",
+                "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.date",
+            "label": "Requested arrival",
+            "location": "header",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r7",
+                "quote": "Requested arrival: Dec 10, 2026",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.buyerPart",
+            "label": "Our item",
+            "location": "item table",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.quantity",
+            "label": "Order qty",
+            "location": "item table",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1",
+                "quote": "Order qty",
+                "bbox": [
+                  0.436,
+                  0.303,
+                  0.477,
+                  0.33
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unit",
+            "label": "UOM",
+            "location": "item table",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unitPrice",
+            "label": "Price each",
+            "location": "item table",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.extendedPrice",
+            "label": "Net value",
+            "location": "item table",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.priceBasisUnit",
+            "label": "All unit prices are per 1 EA.",
+            "location": "below item table",
+            "evidence": [
+              {
+                "anchorId": "po:27564ff0ffc672f1:p1:r13",
+                "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "id": "ack",
+        "type": "acknowledgement",
+        "documentNumber": {
+          "raw": "ACK-9021",
+          "value": "ACK-9021",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:443b145c82cbfb6c:p1",
+              "quote": "ACK-9021",
+              "bbox": [
+                0.291,
+                0.213,
+                0.372,
+                0.225
+              ],
+              "support": "image_reference"
+            }
+          ]
+        },
+        "orderReference": {
+          "raw": "45084",
+          "value": "45084",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:443b145c82cbfb6c:p1",
+              "quote": "45084",
+              "bbox": [
+                0.291,
+                0.186,
+                0.343,
+                0.198
+              ],
+              "support": "image_reference"
+            }
+          ]
+        },
+        "customer": {
+          "raw": "Northstar Demo Manufacturing",
+          "value": "Northstar Demo Manufacturing",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:443b145c82cbfb6c:p1",
+              "quote": "Northstar Demo Manufacturing",
+              "bbox": [
+                0.291,
+                0.159,
+                0.57,
+                0.172
+              ],
+              "support": "image_reference"
+            }
+          ]
+        },
+        "supplier": {
+          "raw": "HARBOR COMPONENTS",
+          "value": "HARBOR COMPONENTS",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:443b145c82cbfb6c:p1",
+              "quote": "HARBOR COMPONENTS",
+              "bbox": [
+                0.07,
+                0.066,
+                0.458,
+                0.089
+              ],
+              "support": "image_reference"
+            }
+          ]
+        },
+        "currency": {
+          "raw": "USD",
+          "value": "USD",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:443b145c82cbfb6c:p1",
+              "quote": "USD",
+              "bbox": [
+                0.248,
+                0.534,
+                0.28,
+                0.546
+              ],
+              "support": "image_reference"
+            }
+          ]
+        },
+        "lines": [
+          {
+            "id": "A1",
+            "dateKind": "unknown",
+            "buyerPart": {
+              "raw": "NX-204",
+              "value": "NX-204",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "NX-204",
+                  "bbox": [
+                    0.232,
+                    0.259,
+                    0.3,
+                    0.272
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "supplierPart": {
+              "raw": "HC-A20",
+              "value": "HC-A20",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "HC-A20",
+                  "bbox": [
+                    0.646,
+                    0.259,
+                    0.714,
+                    0.272
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "description": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "quantity": {
+              "raw": "120",
+              "value": "120",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "120",
+                  "bbox": [
+                    0.326,
+                    0.505,
+                    0.358,
+                    0.518
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "unit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "EA",
+                  "bbox": [
+                    0.365,
+                    0.505,
+                    0.388,
+                    0.518
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "unitPrice": {
+              "raw": "24.00",
+              "value": "24.00",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "24.00",
+                  "bbox": [
+                    0.423,
+                    0.386,
+                    0.465,
+                    0.398
+                  ],
+                  "support": "image_reference"
+                },
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "24.00",
+                  "bbox": [
+                    0.423,
+                    0.437,
+                    0.465,
+                    0.449
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "priceBasisQuantity": {
+              "raw": "1",
+              "value": "1",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "1",
+                  "bbox": [
+                    0.238,
+                    0.582,
+                    0.25,
+                    0.594
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "priceBasisUnit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "EA",
+                  "bbox": [
+                    0.255,
+                    0.582,
+                    0.278,
+                    0.594
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "extendedPrice": {
+              "raw": "2880.00",
+              "value": "2880.00",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "2880.00",
+                  "bbox": [
+                    0.286,
+                    0.534,
+                    0.359,
+                    0.546
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "currency": {
+              "raw": "USD",
+              "value": "USD",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:443b145c82cbfb6c:p1",
+                  "quote": "USD",
+                  "bbox": [
+                    0.248,
+                    0.534,
+                    0.28,
+                    0.546
+                  ],
+                  "support": "image_reference"
+                }
+              ]
+            },
+            "date": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "schedules": [
+              {
+                "id": "S1",
+                "dateKind": "delivery",
+                "quantity": {
+                  "raw": "60",
+                  "value": "60",
+                  "certainty": "clear",
+                  "issue": null,
+                  "evidence": [
+                    {
+                      "anchorId": "ack:443b145c82cbfb6c:p1",
+                      "quote": "60",
+                      "bbox": [
+                        0.204,
+                        0.386,
+                        0.223,
+                        0.398
+                      ],
+                      "support": "image_reference"
+                    }
+                  ]
+                },
+                "unit": {
+                  "raw": "EA",
+                  "value": "EA",
+                  "certainty": "clear",
+                  "issue": null,
+                  "evidence": [
+                    {
+                      "anchorId": "ack:443b145c82cbfb6c:p1",
+                      "quote": "EA",
+                      "bbox": [
+                        0.307,
+                        0.386,
+                        0.326,
+                        0.398
+                      ],
+                      "support": "image_reference"
+                    }
+                  ]
+                },
+                "date": {
+                  "raw": "Dec 12, 2026",
+                  "value": "Dec 12, 2026",
+                  "certainty": "clear",
+                  "issue": null,
+                  "evidence": [
+                    {
+                      "anchorId": "ack:443b145c82cbfb6c:p1",
+                      "quote": "Dec 12, 2026",
+                      "bbox": [
+                        0.577,
+                        0.386,
+                        0.677,
+                        0.398
+                      ],
+                      "support": "image_reference"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "S2",
+                "dateKind": "delivery",
+                "quantity": {
+                  "raw": "60",
+                  "value": "60",
+                  "certainty": "clear",
+                  "issue": null,
+                  "evidence": [
+                    {
+                      "anchorId": "ack:443b145c82cbfb6c:p1",
+                      "quote": "60",
+                      "bbox": [
+                        0.204,
+                        0.437,
+                        0.223,
+                        0.449
+                      ],
+                      "support": "image_reference"
+                    }
+                  ]
+                },
+                "unit": {
+                  "raw": "EA",
+                  "value": "EA",
+                  "certainty": "clear",
+                  "issue": null,
+                  "evidence": [
+                    {
+                      "anchorId": "ack:443b145c82cbfb6c:p1",
+                      "quote": "EA",
+                      "bbox": [
+                        0.307,
+                        0.437,
+                        0.326,
+                        0.449
+                      ],
+                      "support": "image_reference"
+                    }
+                  ]
+                },
+                "date": {
+                  "raw": "Dec 18, 2026",
+                  "value": "Dec 18, 2026",
+                  "certainty": "clear",
+                  "issue": null,
+                  "evidence": [
+                    {
+                      "anchorId": "ack:443b145c82cbfb6c:p1",
+                      "quote": "Dec 18, 2026",
+                      "bbox": [
+                        0.577,
+                        0.437,
+                        0.677,
+                        0.449
+                      ],
+                      "support": "image_reference"
+                    }
+                  ]
+                }
+              }
+            ],
+            "notes": [
+              {
+                "raw": "01 60 EA 24.00 Dec 12, 2026 1440.00",
+                "value": "01 60 EA 24.00 Dec 12, 2026 1440.00",
+                "certainty": "clear",
+                "issue": null,
+                "evidence": [
+                  {
+                    "anchorId": "ack:443b145c82cbfb6c:p1",
+                    "quote": "01 60 EA 24.00 Dec 12, 2026 1440.00",
+                    "bbox": [
+                      0.076,
+                      0.385,
+                      0.887,
+                      0.399
+                    ],
+                    "support": "image_reference"
+                  }
+                ]
+              },
+              {
+                "raw": "02 60 EA 24.00 Dec 18, 2026 1440.00",
+                "value": "02 60 EA 24.00 Dec 18, 2026 1440.00",
+                "certainty": "clear",
+                "issue": null,
+                "evidence": [
+                  {
+                    "anchorId": "ack:443b145c82cbfb6c:p1",
+                    "quote": "02 60 EA 24.00 Dec 18, 2026 1440.00",
+                    "bbox": [
+                      0.076,
+                      0.436,
+                      0.887,
+                      0.45
+                    ],
+                    "support": "image_reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "raw": "All prices are per 1 EA.",
+            "value": "All prices are per 1 EA.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "All prices are per 1 EA.",
+                "bbox": [
+                  0.07,
+                  0.581,
+                  0.285,
+                  0.595
+                ],
+                "support": "image_reference"
+              }
+            ]
+          },
+          {
+            "raw": "Promised arrival means delivery at the customer dock.",
+            "value": "Promised arrival means delivery at the customer dock.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Promised arrival means delivery at the customer dock.",
+                "bbox": [
+                  0.07,
+                  0.607,
+                  0.541,
+                  0.621
+                ],
+                "support": "image_reference"
+              }
+            ]
+          }
+        ],
+        "mappings": [
+          {
+            "field": "documentNumber",
+            "label": "Acknowledgement",
+            "location": "header",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Acknowledgement",
+                "bbox": [
+                  0.07,
+                  0.212,
+                  0.229,
+                  0.225
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "orderReference",
+            "label": "Customer PO",
+            "location": "header",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Customer PO",
+                "bbox": [
+                  0.07,
+                  0.185,
+                  0.19,
+                  0.199
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "customer",
+            "label": "Sold to",
+            "location": "header",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Sold to",
+                "bbox": [
+                  0.07,
+                  0.158,
+                  0.152,
+                  0.172
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "supplier",
+            "label": "HARBOR COMPONENTS",
+            "location": "heading",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "HARBOR COMPONENTS",
+                "bbox": [
+                  0.07,
+                  0.066,
+                  0.458,
+                  0.089
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.buyerPart",
+            "label": "Customer item",
+            "location": "above scheduled deliveries",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Customer item",
+                "bbox": [
+                  0.07,
+                  0.259,
+                  0.223,
+                  0.273
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.supplierPart",
+            "label": "Our ref",
+            "location": "above scheduled deliveries",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Our ref",
+                "bbox": [
+                  0.548,
+                  0.259,
+                  0.638,
+                  0.273
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.quantity",
+            "label": "Total committed quantity",
+            "location": "below scheduled deliveries",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Total committed quantity",
+                "bbox": [
+                  0.07,
+                  0.505,
+                  0.317,
+                  0.519
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "schedule.quantity",
+            "label": "Commit qty",
+            "location": "scheduled deliveries table",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Commit qty",
+                "bbox": [
+                  0.166,
+                  0.34,
+                  0.25,
+                  0.352
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "schedule.unit",
+            "label": "UOM",
+            "location": "scheduled deliveries table",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "UOM",
+                "bbox": [
+                  0.306,
+                  0.34,
+                  0.333,
+                  0.352
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unitPrice",
+            "label": "Net each USD",
+            "location": "scheduled deliveries table",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Net each USD",
+                "bbox": [
+                  0.382,
+                  0.34,
+                  0.481,
+                  0.352
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "schedule.date",
+            "label": "Promised arrival",
+            "location": "scheduled deliveries table",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Promised arrival",
+                "bbox": [
+                  0.572,
+                  0.34,
+                  0.702,
+                  0.352
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.extendedPrice",
+            "label": "Total item value",
+            "location": "below scheduled deliveries",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "Total item value",
+                "bbox": [
+                  0.07,
+                  0.533,
+                  0.239,
+                  0.547
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.priceBasisUnit",
+            "label": "All prices are per 1 EA.",
+            "location": "below totals",
+            "evidence": [
+              {
+                "anchorId": "ack:443b145c82cbfb6c:p1",
+                "quote": "All prices are per 1 EA.",
+                "bbox": [
+                  0.07,
+                  0.581,
+                  0.285,
+                  0.595
+                ],
+                "support": "image_reference"
+              }
+            ],
+            "status": "discovered"
+          }
+        ],
+        "warnings": [
+          "Image transcriptions are candidates, not independently verified text."
+        ]
+      }
+    ],
+    "links": [
+      {
+        "poIds": [
+          "P1"
+        ],
+        "ackIds": [
+          "A1"
+        ],
+        "reason": "The acknowledgement references PO 45084 and customer item NX-204; its scheduled deliveries are explicitly grouped under that item.",
+        "splitExplicit": true,
+        "evidence": [
+          {
+            "anchorId": "po:27564ff0ffc672f1:p1:r4",
+            "quote": "45084",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "po:27564ff0ffc672f1:p1:r11",
+            "quote": "1 NX-204 Aluminum housing rev C 120 EA 24.00 2880.00",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "ack:443b145c82cbfb6c:p1",
+            "quote": "Relationship candidate; inspect the highlighted source region.",
+            "bbox": [
+              0.07,
+              0.185,
+              0.345,
+              0.199
+            ],
+            "support": "image_reference"
+          },
+          {
+            "anchorId": "ack:443b145c82cbfb6c:p1",
+            "quote": "Relationship candidate; inspect the highlighted source region.",
+            "bbox": [
+              0.07,
+              0.258,
+              0.348,
+              0.313
+            ],
+            "support": "image_reference"
+          }
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "receipt": {
+    "provider": "openai",
+    "model": "gpt-6.1-terra",
+    "requestId": "req_ca2db8ffc48b4e76b0c19f501ecf30f7",
+    "generatedAt": "2026-10-26T23:30:06.277Z",
+    "schemaVersion": 1,
+    "usage": {
+      "inputTokens": 10185,
+      "outputTokens": 3347,
+      "estimatedUSD": 0.02692,
+      "basis": "Estimate from provider-reported tokens and configured standard prices; not an invoice."
+    },
+    "sourceHashes": [
+      {
+        "role": "po",
+        "hash": "27564ff0ffc672f1a867ebc17da8735abe2ee2c123a4ce46b853add27fa8a72a"
+      },
+      {
+        "role": "ack",
+        "hash": "443b145c82cbfb6c58bc9edb9172a3431bcfa7a4a35500cd201b1fc4d0c14e06"
+      }
+    ],
+    "profileVersionsOffered": [],
+    "mode": "recorded"
+  },
+  "notice": "Actual AI extraction recorded from these exact fictional sample files. Replaying it makes no new model call. The visitor supplies clarifications and optionally saves their own profile locally."
+}
