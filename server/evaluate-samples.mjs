@@ -1,5 +1,5 @@
 // Operator-only: live evaluation of fictional sample documents. Not a public
-// endpoint and not a way for visitors to reset the one-attempt allowance.
+// endpoint and not a way for visitors to reset the five-attempt allowance.
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";

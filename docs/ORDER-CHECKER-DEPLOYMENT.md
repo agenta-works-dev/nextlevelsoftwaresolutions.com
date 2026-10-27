@@ -1,6 +1,6 @@
 # Intelligent Order Checker: review and deployment
 
-Status: local review implementation. The revised application has **not** been published. Production `order-check.html` is preserved. OpenAI GPT-6.1 Terra has passed four live sample cases and an actual browser upload. Public samples replay those hash-bound real AI readings without a new model call. Production hosting, Turnstile, and publication still require review and authorization.
+Release authorization: Michael approved publication on October 27, 2026 and increased the allowance to **five attempts per browser**. `order-check.html` contains the reviewed application; the earlier spreadsheet checker is retained as `order-check-legacy.html`. OpenAI GPT-6.1 Terra passed four live sample cases and an actual browser upload during review. Public samples replay those hash-bound real AI readings without a new model call. The public API must remain disabled until its secrets and real Turnstile widget are configured and checked.
 
 ## Run the review
 
@@ -84,11 +84,11 @@ Illustrative cost for **10,000 input tokens plus 5,000 output tokens**, standard
 
 These are illustrative token scenarios. In the successful live evaluation, the four original-format pairs used 6,930–10,185 input tokens and 2,521–3,347 output tokens: **$0.021780–$0.026920 per pair** at the configured standard rates. The browser upload used 9,267 input / 2,604 output tokens, estimated **$0.022287**. These estimates use actual reported token counts; caching, billing adjustments and hosting are separate. Images count toward model input; longer documents and output cost more. Qwen has context tiers and regional differences. Hosting and account-specific charges are separate. Sources: [Alibaba Model Studio pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing), [OpenAI pricing](https://developers.openai.com/api/docs/pricing).
 
-Public enforcement includes a signed HttpOnly/SameSite browser cookie, one admitted AI interpretation per browser, a daily HMAC network counter, a strict global monthly count in a single transactional Durable Object, Turnstile verification, origin checks, bounded input/output and two concurrent interpretation slots. Failed admitted requests remain consumed. Confirmations, downloads and recorded samples are free local operations.
+Public enforcement includes a signed HttpOnly/SameSite browser cookie, five admitted AI interpretations per browser, a daily HMAC network counter, a strict global monthly count in a single transactional Durable Object, Turnstile verification, origin checks, bounded input/output and two concurrent interpretation slots. Failed admitted requests consume one attempt. Confirmations, downloads and recorded samples are free local operations. The status endpoint reports attempts used and remaining; each new paid request refreshes the single-use Turnstile token. Older one-attempt usage records count as one, without resetting identity or prior use.
 
-This is **one per browser**, not verified one per human. Clearing cookies or using another device defeats browser identity; network and global limits bound the remaining exposure. No account or personal identity is collected for the basic demonstration.
+This is **five per browser**, not verified five per human. Clearing cookies or using another device defeats browser identity; network and global limits bound the remaining exposure. No account or personal identity is collected for the basic demonstration. Browser allowance records expire with the signed identity after approximately one year; this is not a daily five-attempt reset.
 
-Configuration examples are 100 interpretations/month and 5 per network/day; these are **not an approved spending commitment**. The current API code caps a configured monthly allowance at 500 to keep the simple quota ledger bounded. Select the launch count and provider account limits during deployment approval. A count limit is not a precise dollar budget. The model/output cap cannot be chosen by a visitor, and failed/incomplete calls are never automatically retried.
+Launch protection uses 100 interpretations/month globally and 5 per network/day. A shared network can reach its daily limit before every browser uses its allowance. The current API code caps a configured monthly allowance at 500 to keep the simple quota ledger bounded. A count limit is not a precise dollar budget. The model/output cap cannot be chosen by a visitor, and failed/incomplete calls are never automatically retried.
 
 ## Limits to communicate honestly
 
@@ -98,18 +98,19 @@ Configuration examples are 100 interpretations/month and 5 per network/day; thes
 - Explicit acknowledgement schedules are summed without double-counting parent quantities, and every promised date is retained. A multi-date requested PO schedule or a single acknowledgement allocation across multiple identical PO lines still needs manual allocation; the checker must keep those cases unresolved.
 - No currency conversion, contractual equivalence, authentication, ERP write, order approval, supplier contact or transaction transmission. Taxes/freight are separate conditions. Exact decimal differences are reported; no business rounding tolerance is silently introduced.
 - Model generalization and OCR quality require live evaluation with representative redacted documents. The public sample recordings demonstrate actual model extraction of four exact fictional document pairs. Replaying them is clearly labeled and does not establish that the model has newly interpreted a visitor’s files.
+- Handwritten photos/scans use the same image interpretation path. Handwriting has not yet been benchmarked with representative real forms. Cross-outs, overwriting, cramped numbers and ambiguous dates need human review; a plausible transcription can be wrong. Profiles preserve mappings and confirmed rules, not guaranteed recognition of a writer.
 
 ## Deployment after review and explicit authorization
 
-Do not run a real deploy from this feature branch until Michael authorizes it. The Worker config has `PUBLIC_ENABLED=false`, `workers_dev=false` and **no production routes**.
+Michael authorized the launch on October 27, 2026. The Worker config includes only the canonical `/api/order-checker/*` route; `workers_dev=false` prevents a second public API origin. Keep `PUBLIC_ENABLED=false` until the required real verification widget and private secrets are installed.
 
 1. Complete live provider/browser evaluation. Review the receipt costs, limits, privacy wording and saved-learning behavior. Approve the provider, region, allowance and hosting account.
 2. Confirm ownership/access to the Cloudflare zone already fronting `nextlevelsoftwaresolutions.com`. Create a Turnstile widget for the intended hostname. Set `TURNSTILE_SITE_KEY` and any Qwen workspace/region values as non-secret Worker variables. Keep `ALLOWED_ORIGIN` on the exact canonical origin. Use a staging hostname/its own config if staging is approved.
 3. Set private Worker secrets interactively with the pinned Wrangler version, using `--config wrangler.order-checker.toml`: `TRIAL_SIGNING_SECRET` (at least 32 random bytes), the selected provider API key, and `TURNSTILE_SECRET_KEY`. Never put secret values in the TOML file or a command captured in source history.
 4. Bundle locally first: `WRANGLER_SEND_METRICS=false npx wrangler deploy --dry-run --config wrangler.order-checker.toml`. A dry run is **not** a deployment or proof of Cloudflare account access.
 5. Add only the route `nextlevelsoftwaresolutions.com/api/order-checker/*` in the authorized Cloudflare zone. Keep the static website on its current GitHub Pages origin. Deploy with public processing initially disabled. A route/zone ID is intentionally absent from the checked-in config to prevent accidental publication.
-6. Preserve the existing checker as `order-check-legacy.html` before promoting the reviewed HTML to `order-check.html`. Remove the review-only label/noindex and change its legacy link. Update the homepage tool description to match the actual capabilities and provider processing notice. `npm run build` regenerates the review page's hashed assets; use those generated URLs in the promoted page. Leave the planning questionnaire separate.
-7. Set the approved allowance and enable `PUBLIC_ENABLED=true` only for the authorized launch. Deploy the reviewed static commit through the existing main/GitHub Pages process. Test the canonical public URL, human verification and first/second interpretation behavior; use fictional samples. Verify the Worker route and cache behavior without exposing keys.
+6. The existing checker is preserved as `order-check-legacy.html`; the reviewed HTML is promoted to `order-check.html` with a canonical link and without review-only labels/noindex. The homepage explains original-format uploads and OpenAI processing. `npm run build` updates hashed assets in both document-checker pages. Leave the planning questionnaire separate.
+7. Configure the five-per-browser allowance and enable `PUBLIC_ENABLED=true` only for the authorized launch. Deploy the reviewed static commit through the existing main/GitHub Pages process. Test the canonical public URL, human verification and first/second interpretation behavior with fictional samples. Automated tests verify that only five of eight concurrent requests are admitted and failed admitted calls also consume attempts. Verify the Worker route and cache behavior without exposing keys.
 8. If the static cache serves mismatched versions, purge the affected Cloudflare HTML/asset URLs. Hashed scripts/styles and the versioned PDF assets reduce this risk. Keep the source commit and provider evaluation receipts together for release review.
 
 Rollback: disable `PUBLIC_ENABLED` at the API, restore the previous static commit/checker link, and leave saved browser profiles/export files intact. Existing users can still use local recorded examples and review already-interpreted results. Do not rotate the signing secret merely to reset an individual's allowance; that invalidates every visitor's browser identity.
@@ -118,8 +119,8 @@ Rollback: disable `PUBLIC_ENABLED` at the API, restore the previous static commi
 
 - `scripts/documents/`: readers, schema/source validation, deterministic comparison, versioned profiles, reports, recorded samples and UI.
 - `server/order-interpretation.js`, `server/ai-provider.js`: model prompt, grounded adapter and provider calls.
-- `server/order-api.js`, `server/trial-ledger.js`: admission, bounded input, consent, human verification and one-attempt enforcement.
+- `server/order-api.js`, `server/trial-ledger.js`: admission, bounded input, consent, human verification and five-attempt enforcement.
 - `server/local-order-checker.mjs`: local preview and private file-backed quota ledger.
-- `server/cloudflare-worker.js`, `wrangler.order-checker.toml`: production API adapter and strict transactional quota storage; not deployed.
+- `server/cloudflare-worker.js`, `wrangler.order-checker.toml`: production API adapter and strict transactional quota storage.
 - `server/evaluate-samples.mjs`: operator-only real/prepared sample evaluation and receipts.
 - `tests/document-*.test.mjs`: behavior, security, extraction grounding, comparison, profiles and report tests.

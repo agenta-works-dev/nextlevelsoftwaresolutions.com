@@ -1,5 +1,13 @@
 import { DocumentError } from "../scripts/documents/schema.js";
 
+export const BROWSER_TRIAL_LIMIT = 5;
+
+// Existing one-attempt records count as one; changing the allowance does not
+// erase usage or invalidate a visitor's signed identity.
+export function visitorAttempts(record) {
+  return record ? Math.max(1, Number(record.count) || 1) : 0;
+}
+
 export function emptyLedger() {
   return { version: 1, visitors: {}, ips: {}, months: {} };
 }
@@ -10,9 +18,10 @@ export function reserveTrial(
   const day = now.toISOString().slice(0, 10),
     month = day.slice(0, 7),
     ipKey = `${day}:${ip}`;
-  if (state.visitors[visitor])
+  const used = visitorAttempts(state.visitors[visitor]);
+  if (used >= BROWSER_TRIAL_LIMIT)
     throw new DocumentError(
-      "This browser has used its free document interpretation. You can still answer questions, correct the current interpretation, export results, and explore the sample learning demonstration.",
+      "This browser has used all five free document interpretations. You can still answer questions, correct the current interpretation, export results, and explore the sample learning demonstration.",
       "trial_used",
     );
   if ((state.ips[ipKey] || 0) >= dailyIPLimit)
@@ -26,7 +35,11 @@ export function reserveTrial(
       "monthly_limit",
     );
   const next = structuredClone(state);
-  next.visitors[visitor] = { status: "started", at: now.toISOString() };
+  next.visitors[visitor] = {
+    count: used + 1,
+    status: "started",
+    at: now.toISOString(),
+  };
   next.ips[ipKey] = (next.ips[ipKey] || 0) + 1;
   next.months[month] = (next.months[month] || 0) + 1;
   for (const key of Object.keys(next.ips))

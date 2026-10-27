@@ -63,25 +63,28 @@ await writeFile(
   notices.join("\n\n-----\n\n"),
 );
 const hash = (content) => createHash("sha256").update(content).digest("hex");
-const htmlPath = path.join(root, "order-check-next.html"),
-  html = await readFile(htmlPath, "utf8");
 const jsHash = hash(await readFile(path.join(out, "app.js"))).slice(0, 12),
   cssHash = hash(await readFile(path.join(root, "order-documents.css"))).slice(
     0,
     12,
   );
-await writeFile(
-  htmlPath,
-  html
-    .replace(
-      /order-documents\.css\?v=[^" ]+/g,
-      `order-documents.css?v=${cssHash}`,
-    )
-    .replace(
-      /assets\/order-checker\/app\.js\?v=[^" ]+/g,
-      `assets/order-checker/app.js?v=${jsHash}`,
-    ),
-);
+for (const name of ["order-check-next.html", "order-check.html"]) {
+  const htmlPath = path.join(root, name),
+    html = await readFile(htmlPath, "utf8");
+  if (!html.includes('class="document-checker-page"')) continue;
+  await writeFile(
+    htmlPath,
+    html
+      .replace(
+        /order-documents\.css\?v=[^" ]+/g,
+        `order-documents.css?v=${cssHash}`,
+      )
+      .replace(
+        /assets\/order-checker\/app\.js\?v=[^" ]+/g,
+        `assets/order-checker/app.js?v=${jsHash}`,
+      ),
+  );
+}
 const sampleDirectory = path.join(root, "assets/order-samples"),
   manifest = {};
 for (const name of (await readdir(sampleDirectory)).sort())
@@ -92,5 +95,5 @@ await writeFile(
   JSON.stringify(manifest, null, 2) + "\n",
 );
 console.log(
-  `Built review application. Script ${jsHash}; styles ${cssHash}; ${Object.keys(manifest).length} original-format sample files.`,
+  `Built document checker. Script ${jsHash}; styles ${cssHash}; ${Object.keys(manifest).length} original-format sample files.`,
 );

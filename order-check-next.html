@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="order-documents.css?v=a43a0e0b044e" />
     <script
       type="module"
-      src="assets/order-checker/app.js?v=1578eb7766d0"
+      src="assets/order-checker/app.js?v=1f243ce96ba8"
     ></script>
   </head>
   <body class="document-checker-page">
@@ -34,7 +34,9 @@
         >
         <div class="document-header-links">
           <span class="review-badge">Review version</span
-          ><a class="text-link" href="order-check.html">Current checker ↗</a>
+          ><a class="text-link" href="order-check-legacy.html"
+            >Spreadsheet checker ↗</a
+          >
         </div>
       </div>
     </header>
@@ -188,11 +190,11 @@
       <noscript
         ><div class="notice">
           This tool needs JavaScript to read documents and compare the results.
-          <a href="order-check.html">Use the existing checker</a>.
+          <a href="order-check-legacy.html">Use the spreadsheet checker</a>.
         </div></noscript
       >
       <div class="status-notice" data-service-status role="status">
-        Checking the private review service…
+        Checking the interpretation service…
       </div>
       <section class="upload-workspace" aria-labelledby="upload-heading">
         <div class="section-title-row">
@@ -291,10 +293,10 @@
               redacted copies and agree to the stated AI processing.</label
             >
             <p class="fine-print">
-              One free AI interpretation per browser, with network and overall
+              Five free AI interpretations per browser, with network and overall
               usage limits. Your clarifying answers and calculations stay local.
-              An admitted AI request uses the free allowance even if the
-              provider cannot finish; there are no automatic paid retries.
+              An admitted AI request uses one attempt even if the provider
+              cannot finish; there are no automatic paid retries.
               <a href="#privacy-details">Processing and retention details ↓</a>
             </p>
           </div>
@@ -600,14 +602,28 @@
             </p>
           </details>
           <details>
-            <summary>What does “one free attempt” mean?</summary>
+            <summary>What do the five free attempts include?</summary>
             <p>
-              One live AI interpretation of an uploaded document pair per
-              browser. Clarifications, local recalculations, report downloads,
-              and the recorded AI sample learning demonstration remain
-              available. Anonymous browser identifiers cannot reliably identify
-              a person across devices or cleared cookies; network and overall
-              limits provide additional abuse protection.
+              Five live AI interpretations of uploaded document pairs per
+              browser. Each admitted request uses one attempt, including a
+              request the provider cannot finish. Clarifications, local
+              recalculations, report downloads, and the recorded AI sample
+              learning demonstration remain available. Anonymous browser
+              identifiers cannot reliably identify a person across devices or
+              cleared cookies; network and overall limits provide additional
+              abuse protection.
+            </p>
+          </details>
+          <details>
+            <summary>Can I use handwritten paperwork?</summary>
+            <p>
+              Upload a clear photo or scanned PDF. Handwriting can be harder to
+              read, especially crossed-out entries, cramped numbers, and dates.
+              Review critical quantities, prices, part numbers, and dates
+              against the original image; a plausible reading can still be
+              wrong. You can correct the interpretation before comparing. Saved
+              profiles remember form mappings and confirmed business rules; they
+              do not guarantee recognition of a person’s handwriting.
             </p>
           </details>
         </div>

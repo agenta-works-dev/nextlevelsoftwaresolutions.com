@@ -1,8 +1,8 @@
 # Next Level Software Solutions
 
-The company website, the free **Supplier Acknowledgement Check**, and the separate **Find Your First Useful Automation** planning questionnaire. The existing published pages use static HTML, CSS, and browser JavaScript, retaining the repository’s root deployment and `CNAME`.
+The company website, the free **Intelligent Order Checker**, the original **Supplier Acknowledgement Check**, and the separate **Find Your First Useful Automation** planning questionnaire. Static pages retain the repository’s root GitHub Pages deployment and `CNAME`; a narrowly routed Cloudflare Worker supplies private AI processing.
 
-The revised **Intelligent Order Checker** is a separate, unpublished review application at `order-check-next.html`. It reads original PDF/image/XLSX/CSV documents, displays source references, asks clarification questions, compares normalized values deterministically, and saves optional versioned profiles in the browser. Live interpretation needs a private Qwen or OpenAI API credential and the included server/API. Recorded readings from actual AI extraction are labeled separately and replay without a new AI call.
+The **Intelligent Order Checker** is at `order-check.html`, with a retained review copy at `order-check-next.html`. It reads original PDF/image/XLSX/CSV documents, displays source references, asks clarification questions, compares normalized values deterministically, and saves optional versioned profiles in the browser. Live interpretation uses the included private server/API. Recorded readings from actual AI extraction are labeled separately and replay without a new AI call. The public allowance is **five admitted interpretations per browser**, including failed admitted calls; local clarifications and sample replays do not use attempts.
 
 ## Revised checker review
 
@@ -18,7 +18,7 @@ Open `http://127.0.0.1:8797/order-check-next.html`. Copy `server/private-setting
 
 `npm run verify:samples` verifies the actual sample formats and prepared interpretation workflow without a paid call. `npm run verify:ai` makes four real provider calls against the fictional samples, records receipts and token costs, and checks extraction/comparison/profile reuse. OpenAI GPT-6.1 Terra has passed those four live sample cases and a real browser upload. This is bounded evidence, not a general accuracy guarantee.
 
-See [the architecture, limits and deployment instructions](docs/ORDER-CHECKER-DEPLOYMENT.md) and [the acceptance record](docs/ORDER-CHECKER-ACCEPTANCE.md). The current `order-check.html`, homepage links, and live deployment are intentionally unchanged. Publication requires Michael’s review and explicit deployment authorization.
+See [the architecture, limits and deployment instructions](docs/ORDER-CHECKER-DEPLOYMENT.md) and [the acceptance record](docs/ORDER-CHECKER-ACCEPTANCE.md). Michael authorized publication and the five-attempt allowance on October 27, 2026. The original spreadsheet checker is preserved at `order-check-legacy.html`.
 
 ## Preview
 
@@ -28,9 +28,9 @@ From this directory:
 python3 -m http.server 8796 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8796/`. The working comparison is at `/order-check.html`. The planning questionnaire is at `/automation-checkup.html`; the completed planning example is at `/automation-checkup.html?example=order-acknowledgement`. Use an HTTP server rather than opening the source HTML with a `file:` URL, because the site uses JavaScript modules.
+Open `http://127.0.0.1:8796/`. The document checker is at `/order-check.html`; this static server supports recorded samples but requires the separate API for live AI. The spreadsheet checker is at `/order-check-legacy.html`. The planning questionnaire is at `/automation-checkup.html`; the completed planning example is at `/automation-checkup.html?example=order-acknowledgement`. Use an HTTP server rather than opening source HTML with a `file:` URL, because the site uses JavaScript modules.
 
-## Working comparison
+## Original spreadsheet comparison
 
 - Opens with editable, illustrative sample rows and actual comparison results. Visitors can enter their own purchase order and acknowledgement lines, add/remove lines, or import CSV/tab-separated spreadsheet rows. The downloadable sample provides the required five-column format; no document parsing or AI inference is claimed.
 - Matches exact, unique line IDs and checks part number, quantity, unit price, and delivery date. Flags missing and extra lines. Case and leading zeros are significant. For split deliveries, use distinct scheduled-line IDs on both sides.
@@ -63,7 +63,8 @@ The tests cover recommendation choices, human decision ownership, sensitive-data
 ## Source map
 
 - `index.html`, `styles.css`: company positioning, services, sample comparison, Andonity, contact.
-- `order-check.html`, `order-check.css`: the working free comparison and responsive/print presentation.
+- `order-check.html`, `order-documents.css`: the intelligent document checker and responsive/print presentation.
+- `order-check-legacy.html`, `order-check.css`: the original spreadsheet comparison.
 - `scripts/order-check-model.js`: bounded spreadsheet parsing, validation, comparison, and portable reports.
 - `scripts/order-check.js`: editable rows, import, result invalidation, and user-triggered exports.
 - `automation-checkup.html`, `checkup.css`: the planning questionnaire and its responsive/print presentation.

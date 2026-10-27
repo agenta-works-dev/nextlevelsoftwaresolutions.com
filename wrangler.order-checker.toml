@@ -2,9 +2,13 @@ name = "nlss-order-checker-api"
 main = "server/cloudflare-worker.js"
 compatibility_date = "2026-10-26"
 workers_dev = false
+account_id = "6805cb10bf57ee3af272274386327bdb"
 
-# Do not add a production route or enable public processing until review and approval.
-# After approval, route only nextlevelsoftwaresolutions.com/api/order-checker/*.
+# Michael authorized publication on October 27, 2026. Keep processing disabled
+# until the private provider and Turnstile secrets are installed.
+routes = [
+  { pattern = "nextlevelsoftwaresolutions.com/api/order-checker/*", zone_name = "nextlevelsoftwaresolutions.com" }
+]
 [vars]
 PUBLIC_ENABLED = "false"
 AI_PROVIDER = "openai"

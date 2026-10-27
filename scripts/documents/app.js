@@ -119,8 +119,13 @@ function updateAdmission() {
     (service.captchaRequired && !state.captchaToken);
   if (!state.busy && service?.trialUsed)
     announce(
-      "This browser’s live AI interpretation has been used. Clarifications, corrections, downloads, and recorded samples remain available.",
+      "This browser’s five live AI interpretations have been used. Clarifications, corrections, downloads, and recorded samples remain available.",
     );
+}
+function renewHumanVerification() {
+  state.captchaToken = "";
+  if (state.captchaWidget !== undefined && window.turnstile)
+    window.turnstile.reset(state.captchaWidget);
 }
 function maybeVerifyHuman() {
   const status = state.service;
@@ -199,16 +204,16 @@ async function health() {
     el.classList.toggle("is-ready", status.configured && status.publicEnabled);
     el.innerHTML = status.configured
       ? status.trialUsed
-        ? "<strong>Your free AI interpretation has been used.</strong>Keep working with the current comparison, or explore the recorded samples below."
-        : `<strong>${status.reviewMode ? "Private review service" : "Live interpretation"} ready · ${e(status.model)}</strong>One free document-pair interpretation per browser. Questions, corrections, and comparisons happen locally.`
+        ? "<strong>All five free AI interpretations have been used.</strong>Keep working with the current comparison, or explore the recorded samples below."
+        : `<strong>${status.reviewMode ? "Private review service" : "Live interpretation"} ready · ${e(status.model)}</strong>${status.trialsRemaining} of ${status.trialLimit} free document-pair interpretations remaining in this browser. Questions, corrections, and comparisons happen locally.`
       : "<strong>The learning demonstration is ready. Live AI needs private configuration.</strong>Try the sample documents below. Your own unfamiliar files can be read and inspected locally; AI interpretation becomes available after a provider key is configured on the private server.";
     if (!status.publicEnabled)
       el.innerHTML =
-        "<strong>This revised application is awaiting deployment approval.</strong>The recorded sample demonstration is available. No live AI upload will be sent.";
+        "<strong>Live AI processing is temporarily unavailable.</strong>The recorded sample demonstration is available. No live AI upload will be sent.";
   } catch {
     state.service = null;
     $("[data-service-status]").innerHTML =
-      "<strong>Live AI is unavailable on this preview.</strong>The original-format sample files, source inspection, questions, and local comparison remain available. Your documents have not been sent to a model.";
+      "<strong>Live AI is currently unavailable.</strong>The original-format sample files, source inspection, questions, and local comparison remain available. Your documents have not been sent to a model.";
   }
   updateAdmission();
 }
@@ -382,7 +387,7 @@ async function interpret() {
   busy(
     true,
     "Understanding the documents…",
-    `Selected text and rendered pages are being processed by ${state.service.model}. This is the browser’s one free live interpretation; clarification and comparison will stay local.`,
+    `Selected text and rendered pages are being processed by ${state.service.model}. This uses one of this browser’s five free interpretations; clarification and comparison will stay local.`,
   );
   try {
     const response = await fetch("/api/order-checker/interpret", {
@@ -420,6 +425,8 @@ async function interpret() {
       );
   } finally {
     if (operation === state.operation) {
+      // Turnstile tokens are single-use, including after a failed request.
+      renewHumanVerification();
       state.liveAbort = null;
       busy(false);
       await health();
@@ -1059,6 +1066,7 @@ document.addEventListener("click", (event) => {
     state.generations.ack++;
     state.liveAbort?.abort();
     state.liveAbort = null;
+    renewHumanVerification();
     busy(false);
     announce(
       "Processing cancelled. No partial interpretation will be used; an already admitted AI request may consume the free attempt.",

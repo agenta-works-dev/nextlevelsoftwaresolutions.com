@@ -1,6 +1,11 @@
 import { LIMITS, DocumentError } from "../scripts/documents/schema.js";
 import { publicProviderStatus, interpretDocuments } from "./ai-provider.js";
-import { hmac, visitorIdentity } from "./trial-ledger.js";
+import {
+  hmac,
+  visitorIdentity,
+  visitorAttempts,
+  BROWSER_TRIAL_LIMIT,
+} from "./trial-ledger.js";
 
 const MAX_REQUEST_BYTES = 12 * 1024 * 1024;
 const responseHeaders = {
@@ -308,16 +313,20 @@ export async function handleOrderAPI(
       request.method === "GET"
     ) {
       const state = await ledger.read();
+      const used = visitorAttempts(state.visitors[identity.key]);
       return json(
         {
           ...publicProviderStatus(env),
           reviewMode: local,
-          trialUsed: Boolean(state.visitors[identity.key]),
+          trialUsed: used >= BROWSER_TRIAL_LIMIT,
+          trialsUsed: used,
+          trialLimit: BROWSER_TRIAL_LIMIT,
+          trialsRemaining: Math.max(0, BROWSER_TRIAL_LIMIT - used),
           publicEnabled: local || env.PUBLIC_ENABLED === "true",
           captchaRequired: !local,
           captchaSiteKey: !local ? env.TURNSTILE_SITE_KEY || null : null,
           limit:
-            "One AI interpretation per browser; anonymous network and global limits also apply. Clarifications and recalculations are local and do not consume another interpretation.",
+            "Five AI interpretations per browser; anonymous network and global limits also apply. Clarifications and recalculations are local and do not consume another interpretation.",
         },
         200,
         headers,
@@ -332,7 +341,7 @@ export async function handleOrderAPI(
       return json(
         {
           error:
-            "The revised AI demonstration is awaiting deployment approval. No document has been sent to an AI service.",
+            "Live AI processing is temporarily unavailable. The recorded examples remain available. No document has been sent to an AI service.",
           code: "review_only",
         },
         503,
@@ -355,9 +364,12 @@ export async function handleOrderAPI(
         503,
         headers,
       );
-    if ((await ledger.read()).visitors[identity.key])
+    if (
+      visitorAttempts((await ledger.read()).visitors[identity.key]) >=
+      BROWSER_TRIAL_LIMIT
+    )
       throw new DocumentError(
-        "This browser has used its free AI interpretation. Clarifications, local corrections, exports, and prepared samples remain available.",
+        "This browser has used all five free AI interpretations. Clarifications, local corrections, exports, and recorded samples remain available.",
         "trial_used",
       );
     const ip =

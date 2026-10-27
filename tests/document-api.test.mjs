@@ -24,6 +24,8 @@ import {
   reserveTrial,
   finishTrial,
   visitorIdentity,
+  visitorAttempts,
+  BROWSER_TRIAL_LIMIT,
 } from "../server/trial-ledger.js";
 import { casePair } from "./fixtures/document-pairs.mjs";
 import { DOCUMENT_FIELDS, LINE_FIELDS } from "../scripts/documents/schema.js";
@@ -293,12 +295,23 @@ test("consent and origin admission happen before any provider request", async (t
   assert.equal(calls, 0);
   assert.deepEqual(await ledger.read(), emptyLedger());
 });
-test("one browser can admit exactly one request, including concurrent submissions", async (t) => {
+test("one browser can admit exactly five requests, including concurrent submissions", async (t) => {
   const { ledger } = await tempLedger(t);
   const initial = await handleOrderAPI(
     new Request("http://localhost/api/order-checker/status"),
     env,
     ledger,
+  );
+  assert.deepEqual(
+    await initial
+      .clone()
+      .json()
+      .then(({ trialsUsed, trialsRemaining, trialLimit }) => ({
+        trialsUsed,
+        trialsRemaining,
+        trialLimit,
+      })),
+    { trialsUsed: 0, trialsRemaining: 5, trialLimit: 5 },
   );
   const cookie = initial.headers.get("set-cookie").split(";")[0];
   let calls = 0;
@@ -307,12 +320,16 @@ test("one browser can admit exactly one request, including concurrent submission
       calls++;
       return completed(wireFromRich(pair.extraction));
     };
-  const responses = await Promise.all([
-    handleOrderAPI(request(payload(), { cookie }), env, ledger, { fetcher }),
-    handleOrderAPI(request(payload(), { cookie }), env, ledger, { fetcher }),
-  ]);
-  assert.deepEqual(responses.map((r) => r.status).sort(), [200, 429]);
-  assert.equal(calls, 1);
+  const responses = await Promise.all(
+    Array.from({ length: 8 }, () =>
+      handleOrderAPI(request(payload(), { cookie }), env, ledger, { fetcher }),
+    ),
+  );
+  assert.deepEqual(
+    responses.map((r) => r.status).sort(),
+    [200, 200, 200, 200, 200, 429, 429, 429],
+  );
+  assert.equal(calls, 5);
   const after = await handleOrderAPI(
     new Request("http://localhost/api/order-checker/status", {
       headers: { Cookie: cookie },
@@ -320,7 +337,24 @@ test("one browser can admit exactly one request, including concurrent submission
     env,
     ledger,
   );
-  assert.equal((await after.json()).trialUsed, true);
+  const status = await after.json();
+  assert.equal(status.trialUsed, true);
+  assert.equal(status.trialsUsed, 5);
+  assert.equal(status.trialsRemaining, 0);
+});
+test("usage counts retain earlier one-attempt records when the allowance increases", () => {
+  const now = new Date("2026-10-27T00:00:00Z");
+  let ledger = emptyLedger();
+  ledger.visitors.existing = { status: "complete", at: now.toISOString() };
+  assert.equal(visitorAttempts(ledger.visitors.existing), 1);
+  for (let count = 2; count <= BROWSER_TRIAL_LIMIT; count++) {
+    ledger = reserveTrial(ledger, { visitor: "existing", ip: "network", now });
+    assert.equal(ledger.visitors.existing.count, count);
+  }
+  assert.throws(
+    () => reserveTrial(ledger, { visitor: "existing", ip: "network", now }),
+    (error) => error.code === "trial_used",
+  );
 });
 test("a failed paid request stays consumed and the ledger retains no document content", async (t) => {
   const { dir, ledger } = await tempLedger(t);
@@ -330,14 +364,17 @@ test("a failed paid request stays consumed and the ledger retains no document co
       ledger,
     ),
     cookie = first.headers.get("set-cookie").split(";")[0];
-  assert.equal(
-    (
-      await handleOrderAPI(request(payload(), { cookie }), env, ledger, {
-        fetcher: async () => new Response("provider failure", { status: 500 }),
-      })
-    ).status,
-    502,
-  );
+  for (let attempt = 0; attempt < 5; attempt++) {
+    assert.equal(
+      (
+        await handleOrderAPI(request(payload(), { cookie }), env, ledger, {
+          fetcher: async () =>
+            new Response("provider failure", { status: 500 }),
+        })
+      ).status,
+      502,
+    );
+  }
   const response = await handleOrderAPI(
     request(payload(), { cookie }),
     env,
@@ -522,8 +559,16 @@ test("the local review server serves the built page and denies private/server pa
     (await fetch(app.url + "/api/order-checker/status")).status,
     200,
   );
-  const localhost = new URL(app.url); localhost.hostname = "localhost";
-  const aliasRequest = await fetch(localhost.origin + "/api/order-checker/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: localhost.origin }, body: JSON.stringify(payload()) });
+  const localhost = new URL(app.url);
+  localhost.hostname = "localhost";
+  const aliasRequest = await fetch(
+    localhost.origin + "/api/order-checker/interpret",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Origin: localhost.origin },
+      body: JSON.stringify(payload()),
+    },
+  );
   assert.equal(aliasRequest.status, 503);
   assert.equal((await aliasRequest.json()).code, "not_configured");
   assert.ok(
