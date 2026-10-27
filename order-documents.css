@@ -31,6 +31,291 @@
   font-size: 12px;
   color: #45613f;
 }
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 16px;
+}
+.intro-actions .text-link {
+  font-size: 12px;
+}
+.workflow-possibilities {
+  margin-bottom: 36px;
+  padding: 30px;
+  border: 1px solid #cfdad4;
+  background: #edf1e8;
+}
+.possibilities-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: end;
+  gap: 40px;
+}
+.possibilities-heading .eyebrow {
+  font-size: 9px;
+  margin-bottom: 12px;
+}
+.possibilities-heading h2 {
+  margin: 0;
+  font-size: 29px;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+.possibilities-heading > p,
+.possibilities-context {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0;
+}
+.possibilities-context {
+  max-width: 980px;
+  margin: 20px 0 24px;
+}
+.possibilities-label {
+  margin: 0 0 12px;
+  font-size: 10px;
+  color: #4b6750;
+  font-weight: 600;
+}
+.possibility-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.possibility-card {
+  min-width: 0;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #d8e0da;
+}
+.possibility-card h3 {
+  margin: 18px 0 9px;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+.possibility-card > p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.workflow-sketch {
+  height: 128px;
+  padding: 14px;
+  background: #f2f5ee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+.sketch-check-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
+  align-items: center;
+  gap: 5px;
+}
+.sketch-node {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  color: #45613f;
+}
+.sketch-node svg {
+  width: 25px;
+  height: 25px;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sketch-arrow {
+  color: #7e9582;
+  font-size: 19px;
+  text-align: center;
+}
+.sketch-exception {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 9px;
+  color: #795b31;
+}
+.sketch-exception > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #aa7b35;
+  flex-shrink: 0;
+}
+.sketch-embedded {
+  background: #edf2fa;
+  padding: 12px;
+}
+.sketch-window {
+  background: #fff;
+  border: 1px solid #c5d2e3;
+}
+.sketch-window-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #dde5ef;
+  font-size: 9px;
+  color: #526b85;
+}
+.sketch-window-dots {
+  display: flex;
+  gap: 3px;
+}
+.sketch-window-dots i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #9bb0c9;
+}
+.sketch-order-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 10px 8px 7px;
+  font-size: 9px;
+}
+.sketch-review-status {
+  padding: 2px 5px;
+  font-size: 8px;
+  color: #795b31;
+  background: #f8efd9;
+  white-space: nowrap;
+}
+.sketch-order-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px 9px;
+  font-size: 8px;
+  color: var(--blue);
+}
+.sketch-detail-lines {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+}
+.sketch-detail-lines i {
+  width: 90%;
+  height: 3px;
+  background: #e6ecf3;
+}
+.sketch-detail-lines i + i {
+  width: 60%;
+}
+.sketch-guided {
+  background: #f3f0e8;
+  gap: 11px;
+}
+.sketch-question {
+  align-self: flex-start;
+  padding: 7px 9px;
+  font-size: 10px;
+  color: #526671;
+  background: #fff;
+  border: 1px solid #e0ddd4;
+}
+.sketch-answer {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.sketch-answer-mark {
+  font-size: 17px;
+  line-height: 1;
+  color: #8a7952;
+}
+.sketch-answer strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+}
+.sketch-answer small {
+  display: block;
+  font-size: 8px;
+  color: #7b7868;
+  margin-top: 4px;
+}
+.possibilities-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 25px;
+  padding-top: 22px;
+}
+.possibilities-footer p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.possibilities-footer .text-link {
+  font-size: 12px;
+  white-space: nowrap;
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .workflow-possibilities {
+    padding: 24px;
+  }
+  .possibility-card {
+    padding: 14px;
+  }
+  .workflow-sketch {
+    padding: 10px;
+  }
+  .sketch-order-detail {
+    font-size: 7px;
+  }
+}
+@media (max-width: 760px) {
+  .workflow-possibilities {
+    padding: 22px;
+    margin-bottom: 28px;
+  }
+  .possibilities-heading {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .possibilities-heading h2 {
+    font-size: 27px;
+  }
+  .possibilities-heading > p,
+  .possibilities-context {
+    font-size: 12px;
+  }
+  .possibility-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .possibility-card {
+    padding: 20px;
+  }
+  .workflow-sketch {
+    max-width: 350px;
+    margin-inline: auto;
+  }
+  .possibility-card h3 {
+    font-size: 19px;
+  }
+  .possibilities-footer {
+    padding-top: 20px;
+  }
+}
 .document-header-links {
   display: flex;
   align-items: center;
@@ -1376,6 +1661,7 @@
 @media print {
   .site-header,
   .document-intro,
+  .workflow-possibilities,
   .document-steps,
   .status-notice,
   .upload-workspace,
