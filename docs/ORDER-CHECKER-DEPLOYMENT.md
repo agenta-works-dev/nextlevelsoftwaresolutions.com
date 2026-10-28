@@ -4,6 +4,8 @@ Release authorization: Michael approved publication on October 27, 2026 and incr
 
 The production API is now installed and enabled at the canonical `/api/order-checker/*` route. Its managed Turnstile widget is restricted to `nextlevelsoftwaresolutions.com`, with pre-clearance off. The public status reports five attempts, and requests without verification are refused before reading document content or calling AI. Provider, signing, and verification secrets are private Worker bindings; the checked-in site key is public by design. To suspend new live requests, set `PUBLIC_ENABLED=false` and redeploy the API.
 
+The static release is published and two real public-browser document pairs completed, including saved-profile reuse without new clarification questions. See the dated launch evidence in `ORDER-CHECKER-ACCEPTANCE.md`. The provider fetch must use `redirect: "manual"` and reject 3xx explicitly: Cloudflare Workers does not implement `redirect: "error"`. Do not replace it with automatic redirect following, which could forward credentials or document contents.
+
 ## Run the review
 
 Use Node 22.13 or newer; Node 24 is recommended.

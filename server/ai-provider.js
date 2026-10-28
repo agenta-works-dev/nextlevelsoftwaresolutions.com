@@ -201,7 +201,10 @@ export async function interpretDocuments({
       },
       body: JSON.stringify(request),
       signal: signal ? AbortSignal.any([signal, timeout]) : timeout,
-      redirect: "error",
+      // Workers supports manual/follow, but throws for the standard error
+      // mode before sending a request. Manual preserves the no-forwarding
+      // boundary for the provider credential and document contents.
+      redirect: "manual",
     });
   } catch {
     throw new DocumentError(
@@ -209,6 +212,11 @@ export async function interpretDocuments({
       "provider_unavailable",
     );
   }
+  if (response.status >= 300 && response.status < 400)
+    throw new DocumentError(
+      "The AI endpoint returned an unexpected redirect. The request was not forwarded and no comparison was produced.",
+      "provider_unavailable",
+    );
   if (!response.ok)
     throw new DocumentError(
       response.status === 401 || response.status === 403

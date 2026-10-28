@@ -144,10 +144,33 @@ test("adapters send image/text evidence, forbid tools, and request no stored Ope
   assert.equal(sent.body.store, false);
   assert.equal(sent.body.text.format.strict, true);
   assert.equal(sent.body.tools, undefined);
-  assert.equal(sent.redirect, "error");
+  assert.equal(sent.redirect, "manual");
   assert.ok(sent.body.input[0].content.includes("untrusted evidence"));
   assert.equal(output.extraction.documents[0].lines[0].quantity.raw, "240");
   assert.equal(output.receipt.usage.estimatedUSD, 0.035);
+});
+test("provider redirects cannot forward credentials or documents to another endpoint", async () => {
+  const pair = casePair();
+  let calls = 0;
+  await assert.rejects(
+    interpretDocuments({
+      ...pair,
+      env,
+      fetcher: async (url, options) => {
+        calls++;
+        assert.equal(url, "https://api.openai.com/v1/responses");
+        assert.equal(options.redirect, "manual");
+        return new Response(null, {
+          status: 307,
+          headers: { Location: "https://unrelated.example/collect" },
+        });
+      },
+    }),
+    (error) =>
+      error.code === "provider_unavailable" &&
+      /not forwarded/.test(error.message),
+  );
+  assert.equal(calls, 1);
 });
 test("Qwen uses the private regional workspace and rejects provider/model mismatches", async () => {
   const pair = casePair();
