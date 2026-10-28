@@ -63,4 +63,10 @@ The Cloudflare Worker bundles in a dry run with public processing disabled, no p
 
 This is bounded acceptance of the local review application and these cases. General model accuracy is not guaranteed. Poor scans, unsupported workbook objects, complex allocations, rounding policies and contractual conditions retain the limitations described in the deployment guide. Qwen's hosted adapter has contract tests; local/hosted Qwen accuracy was not evaluated here.
 
-No production publication, merge, Cloudflare route, Turnstile setup, account creation or billing change was performed. Michael's explicit deployment authorization remains required. See `ORDER-CHECKER-DEPLOYMENT.md` for configuration, promotion, public verification and rollback.
+At the October 26 review checkpoint, no production publication, merge, Cloudflare route, Turnstile setup, account creation or billing change had been performed. The following launch update supersedes that publication checkpoint.
+
+## October 27 authorized launch update
+
+Michael approved publication and five attempts per browser. The launch branch passes **100 tests**, including eight concurrent submissions admitting exactly five AI requests, failed requests consuming attempts, and migration of existing one-attempt records without resetting usage. Syntax/build checks, prepared original-format sample cases and the production dependency audit also pass (0 vulnerabilities). Browser review shows the five-attempt counter and handwriting guidance. No new handwriting accuracy benchmark is claimed.
+
+The API is deployed with server-only OpenAI, signing and Turnstile secrets. Its real managed widget is restricted to the company hostname with pre-clearance off. Public readiness returns configured/enabled, five remaining attempts for a fresh visitor and a real widget key. A public interpretation without verification returns HTTP 403 before any document processing. The original spreadsheet checker is preserved at `order-check-legacy.html`. See `ORDER-CHECKER-DEPLOYMENT.md` for promotion, public verification and rollback.

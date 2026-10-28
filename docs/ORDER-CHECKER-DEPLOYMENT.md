@@ -2,6 +2,8 @@
 
 Release authorization: Michael approved publication on October 27, 2026 and increased the allowance to **five attempts per browser**. `order-check.html` contains the reviewed application; the earlier spreadsheet checker is retained as `order-check-legacy.html`. OpenAI GPT-6.1 Terra passed four live sample cases and an actual browser upload during review. Public samples replay those hash-bound real AI readings without a new model call. The public API must remain disabled until its secrets and real Turnstile widget are configured and checked.
 
+The production API is now installed and enabled at the canonical `/api/order-checker/*` route. Its managed Turnstile widget is restricted to `nextlevelsoftwaresolutions.com`, with pre-clearance off. The public status reports five attempts, and requests without verification are refused before reading document content or calling AI. Provider, signing, and verification secrets are private Worker bindings; the checked-in site key is public by design. To suspend new live requests, set `PUBLIC_ENABLED=false` and redeploy the API.
+
 ## Run the review
 
 Use Node 22.13 or newer; Node 24 is recommended.
