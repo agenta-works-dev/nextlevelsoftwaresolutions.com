@@ -1,0 +1,30 @@
+name = "nlss-order-checker-api"
+main = "server/cloudflare-worker.js"
+compatibility_date = "2026-10-26"
+workers_dev = false
+account_id = "6805cb10bf57ee3af272274386327bdb"
+
+# Michael authorized publication on October 27, 2026. Provider, signing, and
+# Turnstile secrets are installed privately; only the public widget key is here.
+routes = [
+  { pattern = "nextlevelsoftwaresolutions.com/api/order-checker/*", zone_name = "nextlevelsoftwaresolutions.com" }
+]
+[vars]
+PUBLIC_ENABLED = "true"
+TURNSTILE_SITE_KEY = "0x4AAAAAAFpJbZaPoas9hSFo"
+AI_PROVIDER = "openai"
+AI_MODEL = "gpt-6.1-terra"
+ALLOWED_ORIGIN = "https://nextlevelsoftwaresolutions.com"
+MONTHLY_TRIAL_LIMIT = "100"
+DAILY_IP_LIMIT = "5"
+
+[[durable_objects.bindings]]
+name = "TRIAL_LEDGER"
+class_name = "TrialLedger"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["TrialLedger"]
+
+[observability]
+enabled = false

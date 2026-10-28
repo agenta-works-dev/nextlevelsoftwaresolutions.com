@@ -1,0 +1,899 @@
+{
+  "version": 1,
+  "sample": "repeat",
+  "extraction": {
+    "schemaVersion": 1,
+    "documents": [
+      {
+        "id": "po",
+        "type": "purchase_order",
+        "documentNumber": {
+          "raw": "45083",
+          "value": "45083",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:a52850b0e5ac46ab:p1:r4",
+              "quote": "45083",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "orderReference": {
+          "raw": null,
+          "value": null,
+          "certainty": "missing",
+          "issue": null,
+          "evidence": []
+        },
+        "customer": {
+          "raw": "Northstar Demo Manufacturing",
+          "value": "Northstar Demo Manufacturing",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:a52850b0e5ac46ab:p1:r6",
+              "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "supplier": {
+          "raw": "Harbor Components",
+          "value": "Harbor Components",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:a52850b0e5ac46ab:p1:r5",
+              "quote": "Supplier: Harbor Components Issued: Nov 03, 2026",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "currency": {
+          "raw": "USD",
+          "value": "USD",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "po:a52850b0e5ac46ab:p1:r6",
+              "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "lines": [
+          {
+            "id": "P1",
+            "dateKind": "delivery",
+            "buyerPart": {
+              "raw": "GSK-8",
+              "value": "GSK-8",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r11",
+                  "quote": "1 GSK-8 8 mm silicone gasket 180 EA 0.75 135.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "supplierPart": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "description": {
+              "raw": "8 mm silicone gasket",
+              "value": "8 mm silicone gasket",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r11",
+                  "quote": "1 GSK-8 8 mm silicone gasket 180 EA 0.75 135.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "quantity": {
+              "raw": "180",
+              "value": "180",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r11",
+                  "quote": "1 GSK-8 8 mm silicone gasket 180 EA 0.75 135.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r11",
+                  "quote": "1 GSK-8 8 mm silicone gasket 180 EA 0.75 135.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unitPrice": {
+              "raw": "0.75",
+              "value": "0.75",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r11",
+                  "quote": "1 GSK-8 8 mm silicone gasket 180 EA 0.75 135.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisQuantity": {
+              "raw": "1",
+              "value": "1",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r13",
+                  "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisUnit": {
+              "raw": "EA",
+              "value": "EA",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r13",
+                  "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "extendedPrice": {
+              "raw": "135.00",
+              "value": "135.00",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r11",
+                  "quote": "1 GSK-8 8 mm silicone gasket 180 EA 0.75 135.00",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "currency": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "date": {
+              "raw": "Dec 10, 2026",
+              "value": "Dec 10, 2026",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "po:a52850b0e5ac46ab:p1:r7",
+                  "quote": "Requested arrival: Dec 10, 2026",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "schedules": [],
+            "notes": []
+          }
+        ],
+        "conditions": [
+          {
+            "raw": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+            "value": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r13",
+                "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ]
+          }
+        ],
+        "mappings": [
+          {
+            "field": "documentNumber",
+            "label": "PURCHASE ORDER",
+            "location": "Page 1 heading and number",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r2",
+                "quote": "NORTHSTAR PURCHASE ORDER",
+                "bbox": null,
+                "support": "exact_quote"
+              },
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r4",
+                "quote": "45083",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "customer",
+            "label": "Customer",
+            "location": "Page 1 header",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r6",
+                "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "supplier",
+            "label": "Supplier",
+            "location": "Page 1 header",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r5",
+                "quote": "Supplier: Harbor Components Issued: Nov 03, 2026",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "currency",
+            "label": "Currency",
+            "location": "Page 1 header",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r6",
+                "quote": "Customer: Northstar Demo Manufacturing Currency: USD",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.buyerPart",
+            "label": "Our item",
+            "location": "Page 1 item table",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.quantity",
+            "label": "Order qty",
+            "location": "Page 1 item table",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r8",
+                "quote": "Lin Order",
+                "bbox": null,
+                "support": "exact_quote"
+              },
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r10",
+                "quote": "e qty",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unit",
+            "label": "UOM",
+            "location": "Page 1 item table",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unitPrice",
+            "label": "Price each",
+            "location": "Page 1 item table",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.priceBasisUnit",
+            "label": "All unit prices are per 1 EA",
+            "location": "Page 1 condition",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r13",
+                "quote": "All unit prices are per 1 EA. Arrival means delivery to the customer.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.extendedPrice",
+            "label": "Net value",
+            "location": "Page 1 item table",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r9",
+                "quote": "Our item Description UOM Price each Net value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.date",
+            "label": "Requested arrival",
+            "location": "Page 1 header",
+            "evidence": [
+              {
+                "anchorId": "po:a52850b0e5ac46ab:p1:r7",
+                "quote": "Requested arrival: Dec 10, 2026",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          }
+        ],
+        "warnings": []
+      },
+      {
+        "id": "ack",
+        "type": "acknowledgement",
+        "documentNumber": {
+          "raw": "ACK-9017",
+          "value": "ACK-9017",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:d427411d3e6658c4:s1:B3",
+              "quote": "ACK-9017",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "orderReference": {
+          "raw": "45083",
+          "value": "45083",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:d427411d3e6658c4:s1:B4",
+              "quote": "45083",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "customer": {
+          "raw": "Northstar Demo Manufacturing",
+          "value": "Northstar Demo Manufacturing",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:d427411d3e6658c4:s1:B5",
+              "quote": "Northstar Demo Manufacturing",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "supplier": {
+          "raw": "Harbor Components",
+          "value": "Harbor Components",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:d427411d3e6658c4:s1:F3",
+              "quote": "Harbor Components",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "currency": {
+          "raw": "USD",
+          "value": "USD",
+          "certainty": "clear",
+          "issue": null,
+          "evidence": [
+            {
+              "anchorId": "ack:d427411d3e6658c4:s1:B6",
+              "quote": "USD",
+              "bbox": null,
+              "support": "exact_quote"
+            }
+          ]
+        },
+        "lines": [
+          {
+            "id": "A1",
+            "dateKind": "delivery",
+            "buyerPart": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "supplierPart": {
+              "raw": "H-G8",
+              "value": "H-G8",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:d427411d3e6658c4:s1:A10",
+                  "quote": "H-G8",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "description": {
+              "raw": "Silicone seal 8mm",
+              "value": "Silicone seal 8mm",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:d427411d3e6658c4:s1:C10",
+                  "quote": "Silicone seal 8mm",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "quantity": {
+              "raw": "15",
+              "value": "15",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:d427411d3e6658c4:s1:D10",
+                  "quote": "15",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unit": {
+              "raw": "BOX",
+              "value": "BOX",
+              "certainty": "clear",
+              "issue": "Pack size is not specified, so the number of EA per BOX is unknown.",
+              "evidence": [
+                {
+                  "anchorId": "ack:d427411d3e6658c4:s1:E10",
+                  "quote": "BOX",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "unitPrice": {
+              "raw": "9.6",
+              "value": "9.6",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:d427411d3e6658c4:s1:F10",
+                  "quote": "9.6",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "priceBasisQuantity": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "priceBasisUnit": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": "Net each does not establish whether the quoted price is per box or per individual piece.",
+              "evidence": []
+            },
+            "extendedPrice": {
+              "raw": "144",
+              "value": "144",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:d427411d3e6658c4:s1:H10",
+                  "quote": "144",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "currency": {
+              "raw": null,
+              "value": null,
+              "certainty": "missing",
+              "issue": null,
+              "evidence": []
+            },
+            "date": {
+              "raw": "2026-12-10",
+              "value": "2026-12-10",
+              "certainty": "clear",
+              "issue": null,
+              "evidence": [
+                {
+                  "anchorId": "ack:d427411d3e6658c4:s1:G10",
+                  "quote": "2026-12-10",
+                  "bbox": null,
+                  "support": "exact_quote"
+                }
+              ]
+            },
+            "schedules": [],
+            "notes": []
+          }
+        ],
+        "conditions": [
+          {
+            "raw": "Not specified",
+            "value": "Not specified",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:B13",
+                "quote": "Not specified",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ]
+          },
+          {
+            "raw": "Arrival means delivery to the customer.",
+            "value": "Arrival means delivery to the customer.",
+            "certainty": "clear",
+            "issue": null,
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:A15",
+                "quote": "Arrival means delivery to the customer.",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ]
+          }
+        ],
+        "mappings": [
+          {
+            "field": "documentNumber",
+            "label": "Confirmation",
+            "location": "Vendor reply!A3:B3",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:A3",
+                "quote": "Confirmation",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "orderReference",
+            "label": "Buyer reference",
+            "location": "Vendor reply!A4:B4",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:A4",
+                "quote": "Buyer reference",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "customer",
+            "label": "Sold to",
+            "location": "Vendor reply!A5:B5",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:A5",
+                "quote": "Sold to",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "supplier",
+            "label": "Issued by",
+            "location": "Vendor reply!E3:F3",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:E3",
+                "quote": "Issued by",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "currency",
+            "label": "Currency",
+            "location": "Vendor reply!A6:B6",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:A6",
+                "quote": "Currency",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.supplierPart",
+            "label": "Our SKU",
+            "location": "Vendor reply column A",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:A9",
+                "quote": "Our SKU",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.buyerPart",
+            "label": "Customer item",
+            "location": "Vendor reply column B",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:B9",
+                "quote": "Customer item",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.quantity",
+            "label": "Confirmed",
+            "location": "Vendor reply column D",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:D9",
+                "quote": "Confirmed",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unit",
+            "label": "Pack",
+            "location": "Vendor reply column E",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:E9",
+                "quote": "Pack",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.unitPrice",
+            "label": "Net each",
+            "location": "Vendor reply column F",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:F9",
+                "quote": "Net each",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.date",
+            "label": "Arrival",
+            "location": "Vendor reply column G",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:G9",
+                "quote": "Arrival",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          },
+          {
+            "field": "line.extendedPrice",
+            "label": "Line value",
+            "location": "Vendor reply column H",
+            "evidence": [
+              {
+                "anchorId": "ack:d427411d3e6658c4:s1:H9",
+                "quote": "Line value",
+                "bbox": null,
+                "support": "exact_quote"
+              }
+            ],
+            "status": "discovered"
+          }
+        ],
+        "warnings": []
+      }
+    ],
+    "links": [
+      {
+        "poIds": [
+          "P1"
+        ],
+        "ackIds": [
+          "A1"
+        ],
+        "reason": "Proposed correspondence: buyer reference matches the PO number and descriptions both refer to an 8 mm silicone seal or gasket; the acknowledgement customer item is blank.",
+        "splitExplicit": false,
+        "evidence": [
+          {
+            "anchorId": "po:a52850b0e5ac46ab:p1:r4",
+            "quote": "45083",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "po:a52850b0e5ac46ab:p1:r11",
+            "quote": "1 GSK-8 8 mm silicone gasket 180 EA 0.75 135.00",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "ack:d427411d3e6658c4:s1:B4",
+            "quote": "45083",
+            "bbox": null,
+            "support": "exact_quote"
+          },
+          {
+            "anchorId": "ack:d427411d3e6658c4:s1:C10",
+            "quote": "Silicone seal 8mm",
+            "bbox": null,
+            "support": "exact_quote"
+          }
+        ]
+      }
+    ],
+    "uncertainties": [
+      {
+        "message": "The correspondence between GSK-8 and H-G8 is proposed from the order reference and descriptions, but no buyer-item cross-reference is supplied.",
+        "kind": "relationship",
+        "poIds": [
+          "P1"
+        ],
+        "ackIds": [
+          "A1"
+        ]
+      }
+    ]
+  },
+  "receipt": {
+    "provider": "openai",
+    "model": "gpt-6.1-terra",
+    "requestId": "req_493ac892d0ed4b5287e9254ba7bac4d8",
+    "generatedAt": "2026-10-26T23:29:27.516Z",
+    "schemaVersion": 1,
+    "usage": {
+      "inputTokens": 9531,
+      "outputTokens": 2568,
+      "estimatedUSD": 0.022371,
+      "basis": "Estimate from provider-reported tokens and configured standard prices; not an invoice."
+    },
+    "sourceHashes": [
+      {
+        "role": "po",
+        "hash": "a52850b0e5ac46aba136031b5026ec1e85408cbe17148812a3501c3c331ab5b5"
+      },
+      {
+        "role": "ack",
+        "hash": "d427411d3e6658c4daef937430b7fe010dc49e998aab7482debec8ffccf9e272"
+      }
+    ],
+    "profileVersionsOffered": [
+      {
+        "id": "c0c57948-7385-4bce-899e-99d55f2c5a4e",
+        "revision": 1
+      }
+    ],
+    "mode": "recorded"
+  },
+  "notice": "Actual AI extraction recorded from these exact fictional sample files. Replaying it makes no new model call. The visitor supplies clarifications and optionally saves their own profile locally."
+}

@@ -4,10 +4,30 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=22.13.0"
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check scripts/checkup-model.js && node --check scripts/checkup.js && node --check scripts/site.js && node --check scripts/order-example.js && node --check scripts/order-check-model.js && node --check scripts/order-check.js"
+    "check": "node scripts/check-syntax.mjs",
+    "build": "node scripts/build-order-checker.mjs",
+    "dev": "node server/local-order-checker.mjs",
+    "verify:samples": "node server/evaluate-samples.mjs",
+    "verify:ai": "node server/evaluate-samples.mjs --live",
+    "record:samples": "node server/record-samples.mjs"
+  },
+  "dependencies": {
+    "fflate": "0.8.3",
+    "pdfjs-dist": "6.4.299",
+    "saxes": "6.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "exceljs": "4.4.0",
+    "wrangler": "4.153.0"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
   }
 }

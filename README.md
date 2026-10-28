@@ -1,6 +1,24 @@
 # Next Level Software Solutions
 
-The company website, the free **Supplier Acknowledgement Check**, and the separate **Find Your First Useful Automation** planning questionnaire. It uses static HTML, CSS, and browser JavaScript, retaining the repository’s existing root deployment and `CNAME`. No build, application server, account system, or API key is needed.
+The company website, the free **Intelligent Order Checker**, the original **Supplier Acknowledgement Check**, and the separate **Find Your First Useful Automation** planning questionnaire. Static pages retain the repository’s root GitHub Pages deployment and `CNAME`; a narrowly routed Cloudflare Worker supplies private AI processing.
+
+The **Intelligent Order Checker** is at `order-check.html`, with a retained review copy at `order-check-next.html`. It reads original PDF/image/XLSX/CSV documents, displays source references, asks clarification questions, compares normalized values deterministically, and saves optional versioned profiles in the browser. Live interpretation uses the included private server/API. Recorded readings from actual AI extraction are labeled separately and replay without a new AI call. The public allowance is **five admitted interpretations per browser**, including failed admitted calls; local clarifications and sample replays do not use attempts.
+
+## Revised checker review
+
+Use Node 22.13 or later (Node 24 recommended):
+
+```sh
+npm ci
+npm run build
+npm run dev
+```
+
+Open `http://127.0.0.1:8797/order-check-next.html`. Copy `server/private-settings.example` to `../../work/order-checker-private/settings.env` for private API configuration; never put credentials inside the website directory. Restart the review server after changing private settings.
+
+`npm run verify:samples` verifies the actual sample formats and prepared interpretation workflow without a paid call. `npm run verify:ai` makes four real provider calls against the fictional samples, records receipts and token costs, and checks extraction/comparison/profile reuse. OpenAI GPT-6.1 Terra has passed those four live sample cases and a real browser upload. This is bounded evidence, not a general accuracy guarantee.
+
+See [the architecture, limits and deployment instructions](docs/ORDER-CHECKER-DEPLOYMENT.md) and [the acceptance record](docs/ORDER-CHECKER-ACCEPTANCE.md). Michael authorized publication and the five-attempt allowance on October 27, 2026. The original spreadsheet checker is preserved at `order-check-legacy.html`.
 
 ## Preview
 
@@ -10,9 +28,9 @@ From this directory:
 python3 -m http.server 8796 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8796/`. The working comparison is at `/order-check.html`. The planning questionnaire is at `/automation-checkup.html`; the completed planning example is at `/automation-checkup.html?example=order-acknowledgement`. Use an HTTP server rather than opening the source HTML with a `file:` URL, because the site uses JavaScript modules.
+Open `http://127.0.0.1:8796/`. The document checker is at `/order-check.html`; this static server supports recorded samples but requires the separate API for live AI. The spreadsheet checker is at `/order-check-legacy.html`. The planning questionnaire is at `/automation-checkup.html`; the completed planning example is at `/automation-checkup.html?example=order-acknowledgement`. Use an HTTP server rather than opening source HTML with a `file:` URL, because the site uses JavaScript modules.
 
-## Working comparison
+## Original spreadsheet comparison
 
 - Opens with editable, illustrative sample rows and actual comparison results. Visitors can enter their own purchase order and acknowledgement lines, add/remove lines, or import CSV/tab-separated spreadsheet rows. The downloadable sample provides the required five-column format; no document parsing or AI inference is claimed.
 - Matches exact, unique line IDs and checks part number, quantity, unit price, and delivery date. Flags missing and extra lines. Case and leading zeros are significant. For split deliveries, use distinct scheduled-line IDs on both sides.
@@ -32,7 +50,7 @@ Open `http://127.0.0.1:8796/`. The working comparison is at `/order-check.html`.
 
 ## Validation
 
-Node 20 or later is needed only for development checks:
+Node 22.13 or later is needed for development checks and the revised checker:
 
 ```sh
 npm test
@@ -45,7 +63,8 @@ The tests cover recommendation choices, human decision ownership, sensitive-data
 ## Source map
 
 - `index.html`, `styles.css`: company positioning, services, sample comparison, Andonity, contact.
-- `order-check.html`, `order-check.css`: the working free comparison and responsive/print presentation.
+- `order-check.html`, `order-documents.css`: the intelligent document checker and responsive/print presentation.
+- `order-check-legacy.html`, `order-check.css`: the original spreadsheet comparison.
 - `scripts/order-check-model.js`: bounded spreadsheet parsing, validation, comparison, and portable reports.
 - `scripts/order-check.js`: editable rows, import, result invalidation, and user-triggered exports.
 - `automation-checkup.html`, `checkup.css`: the planning questionnaire and its responsive/print presentation.
@@ -60,6 +79,6 @@ Andonity is identified as in development. This site does not claim general avail
 
 ## Publication
 
-Production is published from `main` through the repository’s existing GitHub Pages workflow and Cloudflare custom domain. Review and merge changes through the repository’s normal process; no DNS change or new hosting infrastructure is needed.
+The existing static production site is published from `main` through GitHub Pages and the Cloudflare custom domain. The revised checker also needs its private API deployed and configured; follow the separate deployment instructions after review and authorization.
 
 The stylesheet links use a `v` query parameter containing the first 12 characters of the file’s SHA-256. The order comparison's script and its model import use the same convention. Update those values when changing the corresponding files (model first, then UI script, then HTML). This prevents the hosting cache from pairing new HTML with previously cached assets.

@@ -1,0 +1,17 @@
+# Copy this OUTSIDE the website directory, to work/order-checker-private/settings.env.
+# Never paste credentials in chat or commit the private settings.
+# Use your separately configured OpenAI API account; ChatGPT login is separate.
+AI_PROVIDER=openai
+AI_MODEL=gpt-6.1-terra
+OPENAI_API_KEY=
+
+# Optional hosted Qwen alternative (a local Qwen installation is a different setup):
+# AI_PROVIDER=qwen
+# AI_MODEL=qwen3-vl-plus
+# QWEN_WORKSPACE_ID=
+# QWEN_REGION=ap-southeast-1
+# DASHSCOPE_API_KEY=
+
+# Public defaults are examples to approve during deployment review, not permission to spend.
+MONTHLY_TRIAL_LIMIT=100
+DAILY_IP_LIMIT=5

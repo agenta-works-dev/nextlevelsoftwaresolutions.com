@@ -1,0 +1,6 @@
+# Preserve generated bundles and upstream notices exactly; review their sources.
+assets/order-checker/** linguist-generated=true -whitespace
+# These original-format fixtures must retain their exact bytes and source hashes.
+assets/order-samples/*.pdf binary
+assets/order-samples/*.xlsx binary
+assets/order-samples/*.png binary
